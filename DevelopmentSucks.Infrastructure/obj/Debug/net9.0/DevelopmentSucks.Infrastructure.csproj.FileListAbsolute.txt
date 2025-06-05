@@ -1,0 +1,15 @@
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\bin\Debug\net9.0\DevelopmentSucks.Infrastructure.deps.json
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\bin\Debug\net9.0\DevelopmentSucks.Infrastructure.dll
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\bin\Debug\net9.0\DevelopmentSucks.Infrastructure.pdb
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\bin\Debug\net9.0\DevelopmentSucks.Domain.dll
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\bin\Debug\net9.0\DevelopmentSucks.Domain.pdb
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\obj\Debug\net9.0\DevelopmentSucks.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\obj\Debug\net9.0\DevelopmentSucks.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\obj\Debug\net9.0\DevelopmentSucks.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\obj\Debug\net9.0\DevelopmentSucks.Infrastructure.AssemblyInfo.cs
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\obj\Debug\net9.0\DevelopmentSucks.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\obj\Debug\net9.0\Developm.CEE07214.Up2Date
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\obj\Debug\net9.0\DevelopmentSucks.Infrastructure.dll
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\obj\Debug\net9.0\refint\DevelopmentSucks.Infrastructure.dll
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\obj\Debug\net9.0\DevelopmentSucks.Infrastructure.pdb
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\obj\Debug\net9.0\ref\DevelopmentSucks.Infrastructure.dll
