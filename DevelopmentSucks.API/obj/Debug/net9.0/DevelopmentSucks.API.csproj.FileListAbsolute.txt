@@ -127,10 +127,11 @@ C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\sta
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.DevelopmentSucks.API.props
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.DevelopmentSucks.API.props
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\staticwebassets.pack.json
-C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\Developm.F87701A4.Up2Date
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\DevelopmentSucks.API.dll
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\refint\DevelopmentSucks.API.dll
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\DevelopmentSucks.API.pdb
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\DevelopmentSucks.API.genruntimeconfig.cache
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\ref\DevelopmentSucks.API.dll
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\DevelopmentSucks.API.sourcelink.json
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

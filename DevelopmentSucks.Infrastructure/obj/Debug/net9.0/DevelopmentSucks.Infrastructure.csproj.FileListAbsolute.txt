@@ -13,3 +13,6 @@ C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\obj\Debug
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\obj\Debug\net9.0\refint\DevelopmentSucks.Infrastructure.dll
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\obj\Debug\net9.0\DevelopmentSucks.Infrastructure.pdb
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\obj\Debug\net9.0\ref\DevelopmentSucks.Infrastructure.dll
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\obj\Debug\net9.0\DevelopmentSucks.Infrastructure.sourcelink.json
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\bin\Debug\net9.0\DevelopmentSucks.Infrastructure.runtimeconfig.json
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Infrastructure\obj\Debug\net9.0\DevelopmentSucks.Infrastructure.genruntimeconfig.cache

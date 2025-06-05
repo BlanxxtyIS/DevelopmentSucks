@@ -9,3 +9,4 @@ C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Domain\obj\Debug\net9.0\
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Domain\obj\Debug\net9.0\refint\DevelopmentSucks.Domain.dll
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Domain\obj\Debug\net9.0\DevelopmentSucks.Domain.pdb
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Domain\obj\Debug\net9.0\ref\DevelopmentSucks.Domain.dll
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.Domain\obj\Debug\net9.0\DevelopmentSucks.Domain.sourcelink.json
