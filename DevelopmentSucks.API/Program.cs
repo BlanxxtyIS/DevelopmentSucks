@@ -14,18 +14,18 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-using (var scope = app.Services.CreateScope())
-{
-    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+//using (var scope = app.Services.CreateScope())
+//{
+//    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
-    // Пример: выводим все курсы в консоль
-    var courses = await dbContext.Courses.ToListAsync();
+//    // Пример: выводим все курсы в консоль
+//    var courses = await dbContext.Courses.ToListAsync();
 
-    foreach (var course in courses)
-    {
-        Console.WriteLine($"Курс: {course.Title} - {course.Description}");
-    }
-}
+//    foreach (var course in courses)
+//    {
+//        Console.WriteLine($"Курс: {course.Title} - {course.Description}");
+//    }
+//}
 
 if (app.Environment.IsDevelopment())
 {

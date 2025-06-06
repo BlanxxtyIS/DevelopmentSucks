@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|c:\\users\\zver\\desktop\\developmentsucks\\developmentsucks.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|solutionrelative:developmentsucks.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|c:\\users\\zver\\desktop\\developmentsucks\\developmentsucks.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|solutionrelative:developmentsucks.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|c:\\users\\zver\\desktop\\developmentsucks\\developmentsucks.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|solutionrelative:developmentsucks.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|c:\\users\\zver\\desktop\\developmentsucks\\developmentsucks.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|solutionrelative:developmentsucks.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|c:\\users\\zver\\desktop\\developmentsucks\\developmentsucks.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|solutionrelative:developmentsucks.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4AF7F470-F6F3-4E10-A4AF-5DA4D748D591}|DevelopmentSucks.Domain\\DevelopmentSucks.Domain.csproj|c:\\users\\zver\\desktop\\developmentsucks\\developmentsucks.domain\\entities\\chapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,12 +74,11 @@
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.API\\appsettings.Development.json",
               "RelativeDocumentMoniker": "DevelopmentSucks.API\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.API\\appsettings.Development.json*",
-              "RelativeToolTip": "DevelopmentSucks.API\\appsettings.Development.json*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.API\\appsettings.Development.json",
+              "RelativeToolTip": "DevelopmentSucks.API\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-06T11:08:45.887Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-06T11:08:45.887Z"
             },
             {
               "$type": "Document",
@@ -107,16 +106,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.API\\appsettings.json",
               "RelativeDocumentMoniker": "DevelopmentSucks.API\\appsettings.json",
               "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.API\\appsettings.json",
               "RelativeToolTip": "DevelopmentSucks.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-05T10:52:58.645Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T10:52:58.645Z"
             },
             {
               "$type": "Document",
@@ -156,13 +154,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.API\\Program.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.API\\Program.cs",
               "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.API\\Program.cs",
               "RelativeToolTip": "DevelopmentSucks.API\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAmwC8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-05T10:26:57.132Z",
               "EditorCaption": ""
