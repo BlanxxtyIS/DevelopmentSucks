@@ -42,6 +42,21 @@ using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     db.Database.Migrate();
+
+    var courses = await db.Courses
+        .Include(c => c.Chapters)
+        .ToListAsync();
+
+    Console.WriteLine("====== Courses in DB ========");
+    foreach (var course in courses)
+    {
+        Console.WriteLine($"ID: {course.Id}, DESCRIPTOPN: {course.Description}, TITLE: {course.Title}");
+        foreach(var chapter in course.Chapters)
+        {
+            Console.WriteLine($"CHAPTER: {chapter.Title}, ID: {chapter.Id}");
+        }
+        Console.WriteLine("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+    }
 }
 
 app.Run();
