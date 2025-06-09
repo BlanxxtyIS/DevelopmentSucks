@@ -8,11 +8,13 @@
     ".NETCoreApp,Version=v9.0": {
       "DevelopmentSucks.API/1.0.0": {
         "dependencies": {
+          "DevelopmentSucks.Application": "1.0.0",
           "DevelopmentSucks.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "9.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.5",
           "Microsoft.EntityFrameworkCore.Design": "9.0.5",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4",
+          "Scalar.AspNetCore": "2.4.13"
         },
         "runtime": {
           "DevelopmentSucks.API.dll": {}
@@ -544,6 +546,14 @@
           }
         }
       },
+      "Scalar.AspNetCore/2.4.13": {
+        "runtime": {
+          "lib/net9.0/Scalar.AspNetCore.dll": {
+            "assemblyVersion": "2.4.13.0",
+            "fileVersion": "2.4.13.0"
+          }
+        }
+      },
       "System.CodeDom/6.0.0": {
         "runtime": {
           "lib/net6.0/System.CodeDom.dll": {
@@ -629,6 +639,17 @@
         }
       },
       "System.Threading.Channels/7.0.0": {},
+      "DevelopmentSucks.Application/1.0.0": {
+        "dependencies": {
+          "DevelopmentSucks.Domain": "1.0.0"
+        },
+        "runtime": {
+          "DevelopmentSucks.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "DevelopmentSucks.Domain/1.0.0": {
         "runtime": {
           "DevelopmentSucks.Domain.dll": {
@@ -868,6 +889,13 @@
       "path": "npgsql.entityframeworkcore.postgresql/9.0.4",
       "hashPath": "npgsql.entityframeworkcore.postgresql.9.0.4.nupkg.sha512"
     },
+    "Scalar.AspNetCore/2.4.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7EA3SCKM2n7oPJ/yraN5xReXVIaT1rOFA8aasrcLnS1HIwPHJox0IV2Bs/XmFnwgTkSOXtSWjseO3ZhXPNSKnQ==",
+      "path": "scalar.aspnetcore/2.4.13",
+      "hashPath": "scalar.aspnetcore.2.4.13.nupkg.sha512"
+    },
     "System.CodeDom/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -958,6 +986,11 @@
       "sha512": "sha512-qmeeYNROMsONF6ndEZcIQ+VxR4Q/TX/7uIVLJqtwIWL7dDWeh0l1UIqgo4wYyjG//5lUNhwkLDSFl+pAWO6oiA==",
       "path": "system.threading.channels/7.0.0",
       "hashPath": "system.threading.channels.7.0.0.nupkg.sha512"
+    },
+    "DevelopmentSucks.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "DevelopmentSucks.Domain/1.0.0": {
       "type": "project",

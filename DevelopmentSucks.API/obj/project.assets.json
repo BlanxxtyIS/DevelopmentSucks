@@ -719,6 +719,22 @@
           }
         }
       },
+      "Scalar.AspNetCore/2.4.13": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Scalar.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Scalar.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "System.CodeDom/6.0.0": {
         "type": "package",
         "compile": {
@@ -942,6 +958,19 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "DevelopmentSucks.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "DevelopmentSucks.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DevelopmentSucks.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DevelopmentSucks.Application.dll": {}
         }
       },
       "DevelopmentSucks.Domain/1.0.0": {
@@ -2474,6 +2503,23 @@
         "postgresql.png"
       ]
     },
+    "Scalar.AspNetCore/2.4.13": {
+      "sha512": "7EA3SCKM2n7oPJ/yraN5xReXVIaT1rOFA8aasrcLnS1HIwPHJox0IV2Bs/XmFnwgTkSOXtSWjseO3ZhXPNSKnQ==",
+      "type": "package",
+      "path": "scalar.aspnetcore/2.4.13",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net8.0/Scalar.AspNetCore.dll",
+        "lib/net8.0/Scalar.AspNetCore.xml",
+        "lib/net9.0/Scalar.AspNetCore.dll",
+        "lib/net9.0/Scalar.AspNetCore.xml",
+        "scalar.aspnetcore.2.4.13.nupkg.sha512",
+        "scalar.aspnetcore.nuspec"
+      ]
+    },
     "System.CodeDom/6.0.0": {
       "sha512": "CPc6tWO1LAer3IzfZufDBRL+UZQcj5uS207NHALQzP84Vp/z6wF0Aa0YZImOQY8iStY0A2zI/e3ihKNPfUm8XA==",
       "type": "package",
@@ -2862,6 +2908,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "DevelopmentSucks.Application/1.0.0": {
+      "type": "project",
+      "path": "../DevelopmentSucks.Application/DevelopmentSucks.Application.csproj",
+      "msbuildProject": "../DevelopmentSucks.Application/DevelopmentSucks.Application.csproj"
+    },
     "DevelopmentSucks.Domain/1.0.0": {
       "type": "project",
       "path": "../DevelopmentSucks.Domain/DevelopmentSucks.Domain.csproj",
@@ -2875,11 +2926,13 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "DevelopmentSucks.Application >= 1.0.0",
       "DevelopmentSucks.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 9.0.0",
       "Microsoft.EntityFrameworkCore >= 9.0.5",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.5",
-      "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.4"
+      "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.4",
+      "Scalar.AspNetCore >= 2.4.13"
     ]
   },
   "packageFolders": {
@@ -2915,6 +2968,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Application\\DevelopmentSucks.Application.csproj": {
+              "projectPath": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Application\\DevelopmentSucks.Application.csproj"
+            },
             "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Infrastructure\\DevelopmentSucks.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Infrastructure\\DevelopmentSucks.Infrastructure.csproj"
             }
@@ -2954,6 +3010,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[9.0.4, )"
+          },
+          "Scalar.AspNetCore": {
+            "target": "Package",
+            "version": "[2.4.13, )"
           }
         },
         "imports": [
