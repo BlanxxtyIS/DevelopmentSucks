@@ -135,3 +135,6 @@ C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\Dev
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\ref\DevelopmentSucks.API.dll
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\DevelopmentSucks.API.sourcelink.json
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Scalar.AspNetCore.dll
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\DevelopmentSucks.Application.dll
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\DevelopmentSucks.Application.pdb
