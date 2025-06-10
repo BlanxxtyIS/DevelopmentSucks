@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace DevelopmentSucks.API.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class CoursesController : ControllerBase
 {
     private readonly ICoursesService _courseService;
@@ -57,8 +57,8 @@ public class CoursesController : ControllerBase
         return Ok(updatedCourse);
     }
 
-    [HttpDelete]
-    public async Task<ActionResult<Guid>> DeleteCourse([FromBody] Guid id)
+    [HttpDelete("{id}")]
+    public async Task<ActionResult<Guid>> DeleteCourse(Guid id)
     {
         var deletedCourse = await _courseService.DeleteCourse(id);
         return Ok(deletedCourse);
