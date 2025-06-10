@@ -50,7 +50,7 @@ public class CoursesController : ControllerBase
             Id = dto.Id.Value,
             Title = dto.Title,
             Description = dto.Description,
-            CreatedAt = dto.CreatedAt
+            CreatedAt = DateTime.SpecifyKind(dto.CreatedAt, DateTimeKind.Utc)
         };
 
         var updatedCourse = await _courseService.UpdateCourse(course);
@@ -58,7 +58,7 @@ public class CoursesController : ControllerBase
     }
 
     [HttpDelete]
-    public async Task<ActionResult<Guid>> DeleteCourse(Guid id)
+    public async Task<ActionResult<Guid>> DeleteCourse([FromBody] Guid id)
     {
         var deletedCourse = await _courseService.DeleteCourse(id);
         return Ok(deletedCourse);
