@@ -13,6 +13,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<ICoursesRepository, CoursesRepository>();
 builder.Services.AddScoped<ICoursesService, CoursesService>();
+builder.Services.AddScoped<IChaptersRepository, ChaptersRepository>();
+builder.Services.AddScoped<IChaptersService, ChaptersService>();
+builder.Services.AddScoped<ILessonsRepository, LessonsRepository>();
+builder.Services.AddScoped<ILessonsService, LessonsService>();  
 
 builder.Services.AddControllers();
 
