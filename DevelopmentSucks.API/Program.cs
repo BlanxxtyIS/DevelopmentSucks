@@ -3,42 +3,63 @@ using DevelopmentSucks.Domain.Repositories;
 using DevelopmentSucks.Infrastructure.Persistence;
 using DevelopmentSucks.Infrastructure.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
-var builder = WebApplication.CreateBuilder(args);
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
+    .WriteTo.Console()
+    .WriteTo.File("logs/DevelopmentSucks-app.log", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
 
-var connString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(connString)
-);
-
-builder.Services.AddScoped<ICoursesRepository, CoursesRepository>();
-builder.Services.AddScoped<ICoursesService, CoursesService>();
-builder.Services.AddScoped<IChaptersRepository, ChaptersRepository>();
-builder.Services.AddScoped<IChaptersService, ChaptersService>();
-builder.Services.AddScoped<ILessonsRepository, LessonsRepository>();
-builder.Services.AddScoped<ILessonsService, LessonsService>();  
-
-builder.Services.AddControllers();
-
-builder.Services.AddOpenApi();
-
-var app = builder.Build();
-
-if (app.Environment.IsDevelopment())
+try
 {
-    app.MapOpenApi();
+    Log.Information("Создание приложения");
+    var builder = WebApplication.CreateBuilder(args);
+
+    builder.Host.UseSerilog();
+
+    var connString = builder.Configuration.GetConnectionString("DefaultConnection");
+    builder.Services.AddDbContext<AppDbContext>(options =>
+        options.UseNpgsql(connString)
+    );
+
+    builder.Services.AddScoped<ICoursesRepository, CoursesRepository>();
+    builder.Services.AddScoped<ICoursesService, CoursesService>();
+    builder.Services.AddScoped<IChaptersRepository, ChaptersRepository>();
+    builder.Services.AddScoped<IChaptersService, ChaptersService>();
+    builder.Services.AddScoped<ILessonsRepository, LessonsRepository>();
+    builder.Services.AddScoped<ILessonsService, LessonsService>();
+
+    builder.Services.AddControllers();
+
+    builder.Services.AddOpenApi();
+
+    var app = builder.Build();
+
+    if (app.Environment.IsDevelopment())
+    {
+        app.MapOpenApi();
+    }
+
+    app.UseHttpsRedirection();
+
+    app.UseAuthorization();
+
+    app.MapControllers();
+
+    using (var scope = app.Services.CreateScope())
+    {
+        var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+        db.Database.Migrate();
+    }
+
+    app.Run();
 }
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-using (var scope = app.Services.CreateScope())
+catch (Exception ex)
 {
-    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    db.Database.Migrate();
+    Log.Fatal(ex, "Ошибка при старте приложения");
 }
-
-app.Run();
+finally
+{
+    Log.CloseAndFlush();
+}
