@@ -5,7 +5,7 @@ namespace DevelopmentSucks.Domain.Repositories;
 public interface ICoursesRepository
 {
     Task<Guid> CreateCourse(Course course);
-    Task<Guid> DeleteCourse(Guid id);
     Task<List<Course>> GetCourses();
+    Task<Guid> DeleteCourse(Guid id);
     Task<Guid> UpdateCourse(Course course);
 }

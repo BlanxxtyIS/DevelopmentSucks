@@ -948,7 +948,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "DevelopmentSucks.Domain": "1.0.0"
+          "DevelopmentSucks.Domain": "1.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.5"
         },
         "compile": {
           "bin/placeholder/DevelopmentSucks.Application.dll": {}

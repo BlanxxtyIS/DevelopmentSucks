@@ -19,8 +19,15 @@ public class ChaptersController: ControllerBase
     [HttpGet]
     public async Task<ActionResult<List<Chapter>>> GetChapters()
     {
-        var chapters = await _chaptersService.GetAllChapters();
-        return Ok(chapters);
+        try
+        {
+            var chapters = await _chaptersService.GetAllChapters();
+            return Ok(chapters);
+        }
+        catch
+        {
+            return StatusCode(500, "Internal server error");
+        }
     }
 
     [HttpPost]

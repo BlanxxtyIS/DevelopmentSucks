@@ -1,5 +1,6 @@
 ﻿using DevelopmentSucks.Domain.Entities;
 using DevelopmentSucks.Domain.Repositories;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,14 +12,25 @@ namespace DevelopmentSucks.Application.Services;
 public class CoursesService : ICoursesService
 {
     private readonly ICoursesRepository _coursesRepository;
-    public CoursesService(ICoursesRepository coursesRepository)
+    private readonly ILogger<CoursesService> _logger;
+
+    public CoursesService(ICoursesRepository coursesRepository, ILogger<CoursesService> logger)
     {
         _coursesRepository = coursesRepository;
+        _logger = logger;
     }
 
     public async Task<List<Course>> GetAllCourses()
     {
-        return await _coursesRepository.GetCourses();
+        try
+        {
+            return await _coursesRepository.GetCourses();
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Ошибка при получении курсов");
+            throw;
+        }
     }
 
     public async Task<Guid> CreateCourse(Course course)
