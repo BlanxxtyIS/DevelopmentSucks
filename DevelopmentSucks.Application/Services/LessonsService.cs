@@ -23,6 +23,11 @@ public class LessonsService : ILessonsService
         return lessons;
     }
 
+    public async Task<Lesson?> GetLessonById(Guid id)
+    {
+        return await _lessonsRepository.GetLesson(id);
+    }
+
     public async Task<Guid> CreateLesson(Lesson lesson)
     {
         var createdLessonId = await _lessonsRepository.CreateLesson(lesson);

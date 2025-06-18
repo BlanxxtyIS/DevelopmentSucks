@@ -26,6 +26,14 @@ public class LessonsRepository : ILessonsRepository
         return lessons;
     }
 
+    public async Task<Lesson?> GetLesson(Guid id)
+    {
+        var lesson = await _context.Lessons
+            .FindAsync(id);
+
+        return lesson;
+    } 
+
     public async Task<Guid> CreateLesson(Lesson lesson)
     {
         await _context.Lessons.AddAsync(lesson);

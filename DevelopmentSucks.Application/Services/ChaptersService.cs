@@ -22,6 +22,11 @@ public class ChaptersService : IChaptersService
         return await _chaptersRepository.GetChapters();
     }
 
+    public async Task<Chapter?> GetChapterById(Guid id)
+    {
+        return await _chaptersRepository.GetChapter(id);
+    }
+
     public async Task<Guid> CreateChapter(Chapter chapter)
     {
         return await _chaptersRepository.CreateChapter(chapter);

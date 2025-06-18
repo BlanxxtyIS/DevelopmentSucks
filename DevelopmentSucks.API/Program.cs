@@ -1,3 +1,4 @@
+using DevelopmentSucks.API.Extensions;
 using DevelopmentSucks.Application.Services;
 using DevelopmentSucks.Domain.Repositories;
 using DevelopmentSucks.Infrastructure.Persistence;
@@ -35,6 +36,8 @@ try
     builder.Services.AddOpenApi();
 
     var app = builder.Build();
+
+    app.UseMiddleware<ErrorHandlerMiddleware>();
 
     if (app.Environment.IsDevelopment())
     {

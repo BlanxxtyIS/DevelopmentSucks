@@ -22,13 +22,33 @@ public class CoursesController : ControllerBase
     public async Task<ActionResult<List<Course>>> GetCourses()
     {
         var courses = await _courseService.GetAllCourses();
-        return Ok(courses);
+
+        return courses.Any() ? Ok(courses) : NotFound(new ErrorResponse
+        {
+            StatusCode = 404,
+            Message = "Курсы пустые"
+        });
+    }
+
+    [HttpGet("{id:guid}")]
+    public async Task<ActionResult<Course>> GetCourseById(Guid id)
+    {
+        var course = await _courseService.GetCourseById(id);
+
+        return course != null ? Ok(course) : NotFound(new ErrorResponse
+        {
+            StatusCode = 404,
+            Message = "Курса с таким ID нет"
+        });
     }
 
     [HttpPost]
     public async Task<ActionResult<Guid>> CreateCourse([FromBody] CourseDto dto)
     {
-        var course = new Course
+        if (dto == null)
+            return NotFound("Объект пустой");
+
+        Course course = new Course
         {
             Id = Guid.NewGuid(),
             Title = dto.Title,
@@ -37,30 +57,47 @@ public class CoursesController : ControllerBase
         };
 
         var createdCourse = await _courseService.CreateCourse(course);
-        return Ok(createdCourse);
+        return CreatedAtAction(nameof(GetCourseById), new { id = createdCourse }, createdCourse);
     }
 
     [HttpPut]
-    public async Task<ActionResult<Guid>> UpdateCourse([FromBody] CourseDto dto)
+    public async Task<ActionResult> UpdateCourse([FromBody] CourseDto dto)
     {
-        if (dto.Id is null) return BadRequest("Id is requred for update");
+        if (dto.Id == null) 
+            return BadRequest("Id пустой");
 
-        var course = new Course
+        var editing = await _courseService.GetCourseById(dto.Id.Value);
+        if (editing == null)
         {
-            Id = dto.Id.Value,
-            Title = dto.Title,
-            Description = dto.Description,
-            CreatedAt = DateTime.SpecifyKind(dto.CreatedAt, DateTimeKind.Utc)
-        };
+            return NotFound(new ErrorResponse
+            {
+                StatusCode = 404,
+                Message = "Курс для обновления отсутствует"
+            });
+        }
 
-        var updatedCourse = await _courseService.UpdateCourse(course);
-        return Ok(updatedCourse);
+        editing.Title = dto.Title;
+        editing.Description = dto.Description;
+        editing.CreatedAt = dto.CreatedAt;
+
+        await _courseService.UpdateCourse(editing);
+        return NoContent();
     }
 
     [HttpDelete("{id}")]
     public async Task<ActionResult<Guid>> DeleteCourse(Guid id)
     {
-        var deletedCourse = await _courseService.DeleteCourse(id);
-        return Ok(deletedCourse);
+        var course = await _courseService.GetCourseById(id);
+        if (course == null)
+        {
+            return NotFound(new ErrorResponse
+            {
+                StatusCode = 404,
+                Message = "Курс для удаления отсутствует"
+            });
+        }
+
+        await _courseService.DeleteCourse(id);
+        return NoContent();
     }
 }

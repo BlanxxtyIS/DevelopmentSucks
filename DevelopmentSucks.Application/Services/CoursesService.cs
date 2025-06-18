@@ -33,18 +33,31 @@ public class CoursesService : ICoursesService
         }
     }
 
+    public async Task<Course?> GetCourseById(Guid id)
+    {
+        try
+        {
+            return await _coursesRepository.GetCourse(id);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Ошибка при получении курса");
+            throw;
+        }
+    }
+
     public async Task<Guid> CreateCourse(Course course)
     {
         return await _coursesRepository.CreateCourse(course);
     }
 
-    public async Task<Guid> UpdateCourse(Course course)
+    public async Task UpdateCourse(Course course)
     {
-        return await _coursesRepository.UpdateCourse(course);
+        await _coursesRepository.UpdateCourse(course);
     }
 
-    public async Task<Guid> DeleteCourse(Guid id)
+    public async Task DeleteCourse(Guid id)
     {
-        return await _coursesRepository.DeleteCourse(id);
+        await _coursesRepository.DeleteCourse(id);
     }
 }

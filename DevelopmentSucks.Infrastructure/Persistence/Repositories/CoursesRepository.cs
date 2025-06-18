@@ -27,6 +27,14 @@ public class CoursesRepository : ICoursesRepository
         return courses;
     }
 
+    public async Task<Course?> GetCourse(Guid id)
+    {
+        var course = await _context.Courses
+            .FindAsync(id);
+
+        return course;
+    }
+
     public async Task<Guid> CreateCourse(Course course)
     {
         await _context.Courses.AddAsync(course);
@@ -35,20 +43,23 @@ public class CoursesRepository : ICoursesRepository
         return course.Id;
     }
 
-    public async Task<Guid> UpdateCourse(Course course)
+    public async Task UpdateCourse(Course course)
     {
-        _context.Entry(course).State = EntityState.Modified;
-        await _context.SaveChangesAsync();
+        var updated = await _context.Courses.FindAsync(course.Id);
+        if (updated == null) return;
 
-        return course.Id;
+        updated.Id = course.Id;
+        updated.Title = course.Title;
+        updated.Description = course.Description;
+        updated.CreatedAt = course.CreatedAt;
+
+        await _context.SaveChangesAsync();
     }
 
-    public async Task<Guid> DeleteCourse(Guid id)
+    public async Task DeleteCourse(Guid id)
     {
         await _context.Courses
             .Where(c => c.Id == id)
             .ExecuteDeleteAsync();
-
-        return id;
     }
 }

@@ -27,6 +27,14 @@ public class ChaptersRepository: IChaptersRepository
         return chapters;
     }
 
+    public async Task<Chapter?> GetChapter(Guid id)
+    {
+        var chapter = await _context.Chapters
+            .FindAsync(id);
+
+        return chapter;
+    }
+
     public async Task<Guid> CreateChapter(Chapter chapter)
     {
         await _context.Chapters.AddAsync(chapter);
