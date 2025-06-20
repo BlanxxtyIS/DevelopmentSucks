@@ -42,20 +42,25 @@ public class LessonsRepository : ILessonsRepository
         return lesson.Id;
     }
 
-    public async Task<Guid> UpdateLesson(Lesson lesson)
+    public async Task<bool> UpdateLesson(Lesson lesson)
     {
-        _context.Entry(lesson).State = EntityState.Modified;
-        await _context.SaveChangesAsync();
+        var updated = await _context.Lessons.FindAsync(lesson.Id);
+        if (updated == null) return false;
 
-        return lesson.Id;
+        lesson.Title = updated.Title;
+        lesson.Content = updated.Content;
+        lesson.Order = updated.Order;
+
+        await _context.SaveChangesAsync();
+        return true;
     }
 
-    public async Task<Guid> DeleteLesson(Guid id)
+    public async Task<bool> DeleteLesson(Guid id)
     {
-        await _context.Lessons
+        var deleted = await _context.Lessons
             .Where(l => l.Id == id)
             .ExecuteDeleteAsync();
 
-        return id;
+        return deleted > 0;
     }
 }

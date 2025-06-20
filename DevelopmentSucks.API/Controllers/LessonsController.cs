@@ -23,6 +23,18 @@ public class LessonsController: ControllerBase
         return Ok(lessons); 
     }
 
+    [HttpGet("{id:guid}")]
+    public async Task<ActionResult<Lesson>> GetLessonById(Guid id)
+    {
+        var lesson = await _lessonService.GetLessonById(id);
+
+        return lesson != null ? Ok(lesson) : NotFound(new ErrorResponse
+        {
+            StatusCode = 404,
+            Message = "Урока с таким Id нету"
+        });
+    }
+
     [HttpPost]
     public async Task<ActionResult<Guid>> CreateLesson([FromBody] LessonDto dto)
     {
@@ -36,11 +48,11 @@ public class LessonsController: ControllerBase
         };
 
         var createdLessonId = await _lessonService.CreateLesson(lesson);
-        return Ok(lesson);
+        return CreatedAtAction(nameof(GetLessonById), new { id = createdLessonId }, createdLessonId);
     }
 
     [HttpPut]
-    public async Task<ActionResult<Guid>> UpdatedLesson([FromBody] LessonDto dto)
+    public async Task<ActionResult> UpdatedLesson([FromBody] LessonDto dto)
     {
         if (dto.Id == Guid.Empty || dto.Id == null) 
             return BadRequest("Ошибка с ID");
@@ -54,14 +66,23 @@ public class LessonsController: ControllerBase
             ChapterId = dto.ChapterId
         }; 
 
-        var updatedLessonId = await _lessonService.UpdateLesson(lesson);
-        return Ok(updatedLessonId);
+        var updatedLesson = await _lessonService.UpdateLesson(lesson);
+        return updatedLesson ? NoContent() : NotFound(new ErrorResponse
+        {
+            StatusCode = 404,
+            Message = "Ошибка при обновлении курса"
+        });
     }
 
     [HttpDelete("{id}")]
-    public async Task<ActionResult<Guid>> DeleteLesson(Guid id)
+    public async Task<ActionResult> DeleteLesson(Guid id)
     {
         var deletedLessonId = await _lessonService.DeleteLesson(id);
-        return Ok(deletedLessonId);
+
+        return deletedLessonId ? NoContent() : NotFound(new ErrorResponse
+        {
+            StatusCode = 404,
+            Message = "Ошибка при удалении курса"
+        });
     }
 }

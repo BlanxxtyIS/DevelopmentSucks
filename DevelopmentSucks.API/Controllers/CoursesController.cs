@@ -66,38 +66,30 @@ public class CoursesController : ControllerBase
         if (dto.Id == null) 
             return BadRequest("Id пустой");
 
-        var editing = await _courseService.GetCourseById(dto.Id.Value);
-        if (editing == null)
+        var updated = await _courseService.UpdateCourse(new Course
         {
-            return NotFound(new ErrorResponse
-            {
-                StatusCode = 404,
-                Message = "Курс для обновления отсутствует"
-            });
-        }
+            Id = dto.Id.Value,
+            Title = dto.Title,
+            Description = dto.Description,
+            CreatedAt = dto.CreatedAt
+        });
 
-        editing.Title = dto.Title;
-        editing.Description = dto.Description;
-        editing.CreatedAt = dto.CreatedAt;
-
-        await _courseService.UpdateCourse(editing);
-        return NoContent();
+        return updated ? NoContent() : NotFound(new ErrorResponse
+        {
+            StatusCode = 404,
+            Message = "Курс не найден для обновления"
+        });
     }
 
     [HttpDelete("{id}")]
-    public async Task<ActionResult<Guid>> DeleteCourse(Guid id)
+    public async Task<ActionResult> DeleteCourse(Guid id)
     {
-        var course = await _courseService.GetCourseById(id);
-        if (course == null)
-        {
-            return NotFound(new ErrorResponse
-            {
-                StatusCode = 404,
-                Message = "Курс для удаления отсутствует"
-            });
-        }
+        var deleted = await _courseService.DeleteCourse(id);
 
-        await _courseService.DeleteCourse(id);
-        return NoContent();
+        return deleted ? NoContent() : NotFound(new ErrorResponse
+        {
+            StatusCode = 404,
+            Message = "Курс не найден для удаления"
+        });
     }
 }

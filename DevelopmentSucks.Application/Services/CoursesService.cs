@@ -1,11 +1,6 @@
 ﻿using DevelopmentSucks.Domain.Entities;
 using DevelopmentSucks.Domain.Repositories;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevelopmentSucks.Application.Services;
 
@@ -14,7 +9,8 @@ public class CoursesService : ICoursesService
     private readonly ICoursesRepository _coursesRepository;
     private readonly ILogger<CoursesService> _logger;
 
-    public CoursesService(ICoursesRepository coursesRepository, ILogger<CoursesService> logger)
+    public CoursesService(ICoursesRepository coursesRepository, 
+        ILogger<CoursesService> logger)
     {
         _coursesRepository = coursesRepository;
         _logger = logger;
@@ -48,16 +44,40 @@ public class CoursesService : ICoursesService
 
     public async Task<Guid> CreateCourse(Course course)
     {
-        return await _coursesRepository.CreateCourse(course);
+        try
+        {
+            return await _coursesRepository.CreateCourse(course);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Ошибка при создании курса");
+            throw;
+        }
     }
 
-    public async Task UpdateCourse(Course course)
+    public async Task<bool> UpdateCourse(Course course)
     {
-        await _coursesRepository.UpdateCourse(course);
+        try
+        {
+            return await _coursesRepository.UpdateCourse(course);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Ошибка при обновлении курса");
+            throw;
+        }
     }
 
-    public async Task DeleteCourse(Guid id)
+    public async Task<bool> DeleteCourse(Guid id)
     {
-        await _coursesRepository.DeleteCourse(id);
+        try
+        {
+            return await _coursesRepository.DeleteCourse(id);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Ошибка при удалении курса");
+            throw;
+        }
     }
 }

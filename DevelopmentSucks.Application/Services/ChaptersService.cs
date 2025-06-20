@@ -32,15 +32,13 @@ public class ChaptersService : IChaptersService
         return await _chaptersRepository.CreateChapter(chapter);
     }
 
-    public async Task<Guid> UpdateChapter(Chapter chapter)
+    public async Task<bool> UpdateChapter(Chapter chapter)
     {
-        await _chaptersRepository.UpdateChapter(chapter);
-        return chapter.Id;
+        return await _chaptersRepository.UpdateChapter(chapter);
     }
 
-    public async Task<Guid> DeleteChapter(Guid id)
+    public async Task<bool> DeleteChapter(Guid id)
     {
-        await _chaptersRepository.DeleteChapter(id);
-        return id;
+        return await _chaptersRepository.DeleteChapter(id);
     }
 }

@@ -34,15 +34,13 @@ public class LessonsService : ILessonsService
         return createdLessonId;
     }
 
-    public async Task<Guid> UpdateLesson(Lesson lesson)
+    public async Task<bool> UpdateLesson(Lesson lesson)
     {
-        var updatedLessonId = await _lessonsRepository.UpdateLesson(lesson);
-        return updatedLessonId;
+        return await _lessonsRepository.UpdateLesson(lesson);
     }
 
-    public async Task<Guid> DeleteLesson(Guid id)
+    public async Task<bool> DeleteLesson(Guid id)
     {
-        var deletedLessonId = await _lessonsRepository.DeleteLesson(id);
-        return deletedLessonId;
+        return await _lessonsRepository.DeleteLesson(id);
     }
 }

@@ -12,6 +12,6 @@ public interface IChaptersRepository
     Task<List<Chapter>> GetChapters();
     Task<Chapter?> GetChapter(Guid id);
     Task<Guid> CreateChapter(Chapter chapter);
-    Task<Guid> UpdateChapter(Chapter chapter);
-    Task<Guid> DeleteChapter(Guid id);
+    Task<bool> UpdateChapter(Chapter chapter);
+    Task<bool> DeleteChapter(Guid id);
 }

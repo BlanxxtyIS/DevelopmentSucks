@@ -7,6 +7,6 @@ public interface IChaptersService
     Task<Guid> CreateChapter(Chapter chapter);
     Task<List<Chapter>> GetAllChapters();
     Task<Chapter?> GetChapterById(Guid id);
-    Task<Guid> UpdateChapter(Chapter chapter);
-    Task<Guid> DeleteChapter(Guid id);
+    Task<bool> UpdateChapter(Chapter chapter);
+    Task<bool> DeleteChapter(Guid id);
 }

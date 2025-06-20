@@ -43,20 +43,24 @@ public class ChaptersRepository: IChaptersRepository
         return chapter.Id;
     }
 
-    public async Task<Guid> UpdateChapter(Chapter chapter)
+    public async Task<bool> UpdateChapter(Chapter chapter)
     {
-        _context.Entry(chapter).State = EntityState.Modified;
-        await _context.SaveChangesAsync();
+        var updated = await _context.Chapters.FindAsync(chapter.Id);
+        if (updated == null) return false;
 
-        return chapter.Id;
+        updated.Title = chapter.Title;
+        updated.Order = chapter.Order;
+
+        await _context.SaveChangesAsync();
+        return true;
     }
 
-    public async Task<Guid> DeleteChapter(Guid id)
+    public async Task<bool> DeleteChapter(Guid id)
     {
-        await _context.Chapters
+        var deleted = await _context.Chapters
             .Where(c => c.Id == id)
             .ExecuteDeleteAsync();
 
-        return id;
+        return deleted > 0;
     }
 }

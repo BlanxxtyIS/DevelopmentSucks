@@ -20,7 +20,23 @@ public class ChaptersController: ControllerBase
     public async Task<ActionResult<List<Chapter>>> GetChapters()
     {
         var chapters = await _chaptersService.GetAllChapters();
-        return Ok(chapters);
+        return chapters.Any() ? Ok(chapters) : NotFound(new ErrorResponse
+        {
+            StatusCode = 404,
+            Message = "Список глав пуст"
+        });
+    }
+
+    [HttpGet("{id:guid}")]
+    public async Task<ActionResult<Chapter>> GetChapterById(Guid id)
+    {
+        var chapter = await _chaptersService.GetChapterById(id);
+
+        return chapter != null ? Ok(chapter) : NotFound(new ErrorResponse
+        {
+            StatusCode = 404,
+            Message = "Главы с таким Id не существует"
+        });
     }
 
     [HttpPost]
@@ -34,31 +50,41 @@ public class ChaptersController: ControllerBase
             CourseId = dto.CourseId,
         };
 
-        var createdChapter = await _chaptersService.CreateChapter(chapter);
-        return Ok(createdChapter);
+        var id = await _chaptersService.CreateChapter(chapter);
+
+        return CreatedAtAction(nameof(GetChapterById), new { id }, id);
     }
 
     [HttpPut]
-    public async Task<ActionResult<Guid>> UpdateChapter([FromBody] ChapterDto dto)
+    public async Task<ActionResult> UpdateChapter([FromBody] ChapterDto dto)
     {
-        if (dto.Id == null || dto.Id == Guid.Empty) return BadRequest("Пустой id");
+        if (dto.Id == null || dto.Id == Guid.Empty) 
+            return BadRequest("Пустой id");
 
-        var chapter = new Chapter
+        var updatedChapter = await _chaptersService.UpdateChapter(new Chapter
         {
             Id = dto.Id.Value,
             Title = dto.Title,
             Order = dto.Order,
-            CourseId = dto.CourseId,
-        };
+            CourseId = dto.CourseId
+        });
 
-        var updatedChapterId = await _chaptersService.UpdateChapter(chapter);
-        return Ok(updatedChapterId);
+        return updatedChapter ? NoContent() : NotFound(new ErrorResponse
+        {
+            StatusCode = 404,
+            Message = "Ошибка при обновлении главы"
+        });
     }
 
     [HttpDelete("{id}")]
-    public async Task<ActionResult<Guid>> DeleteChapter(Guid id)
+    public async Task<ActionResult> DeleteChapter(Guid id)
     {
-        var deletedChapterId = await _chaptersService.DeleteChapter(id);
-        return Ok(deletedChapterId);
+        var deletedChapter = await _chaptersService.DeleteChapter(id);
+
+        return deletedChapter ? NoContent() : NotFound(new ErrorResponse
+        {
+            StatusCode = 404,
+            Message = "Ошибка при удалении главы"
+        });
     }
 }

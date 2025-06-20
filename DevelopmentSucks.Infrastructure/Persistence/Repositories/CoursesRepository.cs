@@ -43,23 +43,25 @@ public class CoursesRepository : ICoursesRepository
         return course.Id;
     }
 
-    public async Task UpdateCourse(Course course)
+    public async Task<bool> UpdateCourse(Course course)
     {
         var updated = await _context.Courses.FindAsync(course.Id);
-        if (updated == null) return;
+        if (updated == null) return false;
 
-        updated.Id = course.Id;
         updated.Title = course.Title;
         updated.Description = course.Description;
         updated.CreatedAt = course.CreatedAt;
 
         await _context.SaveChangesAsync();
+        return true;
     }
 
-    public async Task DeleteCourse(Guid id)
+    public async Task<bool> DeleteCourse(Guid id)
     {
-        await _context.Courses
+        var deleted = await _context.Courses
             .Where(c => c.Id == id)
             .ExecuteDeleteAsync();
+
+        return deleted > 0;
     }
 }
