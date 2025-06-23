@@ -1,5 +1,6 @@
 ﻿using DevelopmentSucks.Application.Contracts.DTO;
 using DevelopmentSucks.Application.Services;
+using DevelopmentSucks.Domain.Common;
 using DevelopmentSucks.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,9 +18,9 @@ public class LessonsController: ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<Lesson>>> GetAllLessons()
+    public async Task<ActionResult<List<Lesson>>> GetAllLessons([FromQuery] PaginingParameters pagining)
     {
-        var lessons = await _lessonService.GetAllLessons();
+        var lessons = await _lessonService.GetAllLessons(pagining);
         return Ok(lessons); 
     }
 

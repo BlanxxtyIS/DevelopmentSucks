@@ -1,5 +1,7 @@
-﻿using DevelopmentSucks.Domain.Entities;
+﻿using DevelopmentSucks.Domain.Common;
+using DevelopmentSucks.Domain.Entities;
 using DevelopmentSucks.Domain.Repositories;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,36 +13,77 @@ namespace DevelopmentSucks.Application.Services;
 public class LessonsService : ILessonsService
 {
     private readonly ILessonsRepository _lessonsRepository;
+    private readonly ILogger<LessonsService> _logger;
 
-    public LessonsService(ILessonsRepository lessonsRepository)
+    public LessonsService(ILessonsRepository lessonsRepository, 
+        ILogger<LessonsService> logger)
     {
         _lessonsRepository = lessonsRepository;
+        _logger = logger;
     }
 
-    public async Task<List<Lesson>> GetAllLessons()
+    public async Task<List<Lesson>> GetAllLessons(PaginingParameters pagining)
     {
-        var lessons = await _lessonsRepository.GetLessons();
-        return lessons;
+        try
+        {
+            return await _lessonsRepository.GetLessons(pagining);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Ошибка при получении всех уроков в LessonsService");
+            throw;
+        }
     }
 
     public async Task<Lesson?> GetLessonById(Guid id)
     {
-        return await _lessonsRepository.GetLesson(id);
+        try
+        {
+            return await _lessonsRepository.GetLesson(id);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Ошибка при получении урока в LessonsService");
+            throw;
+        }
     }
 
     public async Task<Guid> CreateLesson(Lesson lesson)
     {
-        var createdLessonId = await _lessonsRepository.CreateLesson(lesson);
-        return createdLessonId;
+        try
+        {
+            return await _lessonsRepository.CreateLesson(lesson);
+        } 
+        catch(Exception ex)
+        {
+            _logger.LogError(ex, "Ошибка при создании урока в LessonsService");
+            throw;
+        }
     }
 
     public async Task<bool> UpdateLesson(Lesson lesson)
     {
-        return await _lessonsRepository.UpdateLesson(lesson);
+        try
+        {
+            return await _lessonsRepository.UpdateLesson(lesson);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Ошибка при обновлении урока в LessonsService");
+            throw;
+        }
     }
 
     public async Task<bool> DeleteLesson(Guid id)
     {
-        return await _lessonsRepository.DeleteLesson(id);
+        try
+        {
+            return await _lessonsRepository.DeleteLesson(id);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Ошибка при удалении урока в LessonsService");
+            throw;
+        }
     }
 }

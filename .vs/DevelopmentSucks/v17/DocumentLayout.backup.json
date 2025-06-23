@@ -19,6 +19,18 @@
       "RelativeMoniker": "D:0:0:{7E0F0750-6CB4-407F-958C-CF47DDEA1248}|DevelopmentSucks.Infrastructure\\DevelopmentSucks.Infrastructure.csproj|solutionrelative:developmentsucks.infrastructure\\persistence\\repositories\\chaptersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{4AF7F470-F6F3-4E10-A4AF-5DA4D748D591}|DevelopmentSucks.Domain\\DevelopmentSucks.Domain.csproj|c:\\users\\zver\\desktop\\developmentsucks\\developmentsucks.domain\\common\\paginingparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AF7F470-F6F3-4E10-A4AF-5DA4D748D591}|DevelopmentSucks.Domain\\DevelopmentSucks.Domain.csproj|solutionrelative:developmentsucks.domain\\common\\paginingparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|c:\\users\\zver\\desktop\\developmentsucks\\developmentsucks.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|solutionrelative:developmentsucks.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|c:\\users\\zver\\desktop\\developmentsucks\\developmentsucks.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|solutionrelative:developmentsucks.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4AF7F470-F6F3-4E10-A4AF-5DA4D748D591}|DevelopmentSucks.Domain\\DevelopmentSucks.Domain.csproj|c:\\users\\zver\\desktop\\developmentsucks\\developmentsucks.domain\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AF7F470-F6F3-4E10-A4AF-5DA4D748D591}|DevelopmentSucks.Domain\\DevelopmentSucks.Domain.csproj|solutionrelative:developmentsucks.domain\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -33,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{16E64CAA-D38C-4459-8A4D-CB1D8647146F}|DevelopmentSucks.Application\\DevelopmentSucks.Application.csproj|c:\\users\\zver\\desktop\\developmentsucks\\developmentsucks.application\\services\\coursesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16E64CAA-D38C-4459-8A4D-CB1D8647146F}|DevelopmentSucks.Application\\DevelopmentSucks.Application.csproj|solutionrelative:developmentsucks.application\\services\\coursesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AF7F470-F6F3-4E10-A4AF-5DA4D748D591}|DevelopmentSucks.Domain\\DevelopmentSucks.Domain.csproj|c:\\users\\zver\\desktop\\developmentsucks\\developmentsucks.domain\\common\\paginingparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AF7F470-F6F3-4E10-A4AF-5DA4D748D591}|DevelopmentSucks.Domain\\DevelopmentSucks.Domain.csproj|solutionrelative:developmentsucks.domain\\common\\paginingparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4AF7F470-F6F3-4E10-A4AF-5DA4D748D591}|DevelopmentSucks.Domain\\DevelopmentSucks.Domain.csproj|c:\\users\\zver\\desktop\\developmentsucks\\developmentsucks.domain\\developmentsucks.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -78,11 +86,41 @@
       "DocumentGroups": [
         {
           "DockedHeight": 257,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 12,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "DevelopmentSucks.API\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "DevelopmentSucks.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-23T08:06:08.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.API\\appsettings.json",
+              "RelativeDocumentMoniker": "DevelopmentSucks.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.API\\appsettings.json",
+              "RelativeToolTip": "DevelopmentSucks.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-23T08:06:06.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Course.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Domain\\Entities\\Course.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Domain\\Entities\\Course.cs",
@@ -95,20 +133,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "PaginingParameters.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Domain\\Common\\PaginingParameters.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Domain\\Common\\PaginingParameters.cs",
               "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Domain\\Common\\PaginingParameters.cs",
               "RelativeToolTip": "DevelopmentSucks.Domain\\Common\\PaginingParameters.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-23T07:29:52.416Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "DevelopmentSucks.Domain",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Domain\\DevelopmentSucks.Domain.csproj",
               "RelativeDocumentMoniker": "DevelopmentSucks.Domain\\DevelopmentSucks.Domain.csproj",
@@ -121,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "ICoursesRepository.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Domain\\Repositories\\ICoursesRepository.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Domain\\Repositories\\ICoursesRepository.cs",
@@ -134,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "ICoursesService.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Application\\Services\\ICoursesService.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Application\\Services\\ICoursesService.cs",
@@ -146,12 +184,8 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "CourseDto.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Application\\Contracts\\DTO\\CourseDto.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Application\\Contracts\\DTO\\CourseDto.cs",
@@ -163,7 +197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "LessonsRepository.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\LessonsRepository.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\LessonsRepository.cs",
@@ -194,7 +228,7 @@
               "RelativeDocumentMoniker": "DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\CoursesRepository.cs",
               "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\CoursesRepository.cs",
               "RelativeToolTip": "DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\CoursesRepository.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAxwB8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAxwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-20T11:11:18.564Z",
               "EditorCaption": ""
@@ -207,7 +241,7 @@
               "RelativeDocumentMoniker": "DevelopmentSucks.API\\Controllers\\CoursesController.cs",
               "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.API\\Controllers\\CoursesController.cs",
               "RelativeToolTip": "DevelopmentSucks.API\\Controllers\\CoursesController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAAB4AAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-20T11:08:08.268Z",
               "EditorCaption": ""
@@ -227,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "LessonsController.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.API\\Controllers\\LessonsController.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.API\\Controllers\\LessonsController.cs",
@@ -239,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "LessonsService.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Application\\Services\\LessonsService.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Application\\Services\\LessonsService.cs",
@@ -251,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "ChaptersService.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Application\\Services\\ChaptersService.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Application\\Services\\ChaptersService.cs",
@@ -264,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "CoursesService.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Application\\Services\\CoursesService.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Application\\Services\\CoursesService.cs",
@@ -277,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "IChaptersService.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Application\\Services\\IChaptersService.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Application\\Services\\IChaptersService.cs",
@@ -289,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "ILessonsService.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Application\\Services\\ILessonsService.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Application\\Services\\ILessonsService.cs",

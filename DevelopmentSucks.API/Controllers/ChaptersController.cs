@@ -1,6 +1,7 @@
 ﻿using DevelopmentSucks.Application.Contracts;
 using DevelopmentSucks.Application.Contracts.DTO;
 using DevelopmentSucks.Application.Services;
+using DevelopmentSucks.Domain.Common;
 using DevelopmentSucks.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,9 +19,9 @@ public class ChaptersController: ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<Chapter>>> GetChapters()
+    public async Task<ActionResult<List<Chapter>>> GetChapters([FromQuery] PaginingParameters pagining)
     {
-        var chapters = await _chaptersService.GetAllChapters();
+        var chapters = await _chaptersService.GetAllChapters(pagining);
 
         return chapters.Any() ? Ok(chapters) : NotFound(new ErrorResponse
         {

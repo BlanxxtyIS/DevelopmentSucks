@@ -26,7 +26,7 @@ public class CoursesService : ICoursesService
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Ошибка при получении курсов");
+            _logger.LogError(ex, "Ошибка при получении курсов в CourseService");
             throw;
         }
     }

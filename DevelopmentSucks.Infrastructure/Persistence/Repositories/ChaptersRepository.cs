@@ -1,4 +1,5 @@
-﻿using DevelopmentSucks.Domain.Entities;
+﻿using DevelopmentSucks.Domain.Common;
+using DevelopmentSucks.Domain.Entities;
 using DevelopmentSucks.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -18,10 +19,13 @@ public class ChaptersRepository: IChaptersRepository
         _context = context;
     }
 
-    public async Task<List<Chapter>> GetChapters()
+    public async Task<List<Chapter>> GetChapters(PaginingParameters pagining)
     {
         var chapters = await _context.Chapters
             .AsNoTracking()
+            .OrderBy(c => c.Title)
+            .Skip((pagining.PageNumber - 1) * pagining.PageSize)
+            .Take(pagining.PageSize)
             .ToListAsync();
 
         return chapters;
