@@ -1,5 +1,7 @@
-﻿using DevelopmentSucks.Application.Contracts.DTO;
+﻿using DevelopmentSucks.Application.Contracts;
+using DevelopmentSucks.Application.Contracts.DTO;
 using DevelopmentSucks.Application.Services;
+using DevelopmentSucks.Domain.Common;
 using DevelopmentSucks.Domain.Entities;
 using DevelopmentSucks.Domain.Repositories;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -19,9 +21,9 @@ public class CoursesController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<Course>>> GetCourses()
+    public async Task<ActionResult<List<Course>>> GetCourses([FromQuery] PaginingParameters pagining)
     {
-        var courses = await _courseService.GetAllCourses();
+        var courses = await _courseService.GetAllCourses(pagining);
 
         return courses.Any() ? Ok(courses) : NotFound(new ErrorResponse
         {

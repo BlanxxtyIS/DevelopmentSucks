@@ -1,4 +1,6 @@
-﻿using DevelopmentSucks.Domain.Entities;
+﻿using DevelopmentSucks.Application.Contracts;
+using DevelopmentSucks.Domain.Common;
+using DevelopmentSucks.Domain.Entities;
 using DevelopmentSucks.Domain.Repositories;
 using Microsoft.Extensions.Logging;
 
@@ -16,11 +18,11 @@ public class CoursesService : ICoursesService
         _logger = logger;
     }
 
-    public async Task<List<Course>> GetAllCourses()
+    public async Task<List<Course>> GetAllCourses(PaginingParameters pagining)
     {
         try
         {
-            return await _coursesRepository.GetCourses();
+            return await _coursesRepository.GetCourses(pagining);
         }
         catch (Exception ex)
         {

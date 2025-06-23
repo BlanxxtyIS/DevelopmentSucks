@@ -1,4 +1,5 @@
-﻿using DevelopmentSucks.Application.Contracts.DTO;
+﻿using DevelopmentSucks.Application.Contracts;
+using DevelopmentSucks.Application.Contracts.DTO;
 using DevelopmentSucks.Application.Services;
 using DevelopmentSucks.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -20,6 +21,7 @@ public class ChaptersController: ControllerBase
     public async Task<ActionResult<List<Chapter>>> GetChapters()
     {
         var chapters = await _chaptersService.GetAllChapters();
+
         return chapters.Any() ? Ok(chapters) : NotFound(new ErrorResponse
         {
             StatusCode = 404,
