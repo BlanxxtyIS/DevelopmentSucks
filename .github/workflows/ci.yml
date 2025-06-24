@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Клонировать репозиторий
+      uses: actions/checkout@v4
+
+    - name: Установить .NET SDK
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Восстановить зависимости
+      run: dotnet restore
+
+    - name: Сборка проекта
+      run: dotnet build --no-restore --configuration Release
+
+    - name: Запуск тестов
+      run: dotnet test --no-build --configuration Release
