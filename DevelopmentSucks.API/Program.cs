@@ -1,7 +1,10 @@
 using DevelopmentSucks.API.Extensions;
 using DevelopmentSucks.Application.Services;
+using DevelopmentSucks.Application.Services.Identity;
+using DevelopmentSucks.Domain;
 using DevelopmentSucks.Domain.Repositories;
 using DevelopmentSucks.Infrastructure.Persistence;
+using DevelopmentSucks.Infrastructure.Persistence.Identity;
 using DevelopmentSucks.Infrastructure.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -30,6 +33,10 @@ try
     builder.Services.AddScoped<IChaptersService, ChaptersService>();
     builder.Services.AddScoped<ILessonsRepository, LessonsRepository>();
     builder.Services.AddScoped<ILessonsService, LessonsService>();
+
+    builder.Services.AddScoped<IAuthService, AuthService>();
+    builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
+    builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 
     builder.Services.AddControllers();
 

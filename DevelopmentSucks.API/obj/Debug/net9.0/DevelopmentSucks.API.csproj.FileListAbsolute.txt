@@ -136,7 +136,6 @@ C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\ref
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\DevelopmentSucks.API.sourcelink.json
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\DevelopmentSucks.Application.dll
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\DevelopmentSucks.Application.pdb
-C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Serilog.dll
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Serilog.AspNetCore.dll
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Serilog.Extensions.Hosting.dll
@@ -146,3 +145,5 @@ C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Ser
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Serilog.Sinks.Console.dll
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Serilog.Sinks.File.dll
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\BCrypt.Net-Next.dll
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
