@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
+//Happy Hacking!
 namespace DevelopmentSucks.API.Extensions;
 
 public static class ServiceExtensions
