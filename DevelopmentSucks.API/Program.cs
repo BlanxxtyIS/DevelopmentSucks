@@ -1,10 +1,12 @@
 using DevelopmentSucks.API.Extensions;
 using DevelopmentSucks.Application.Services;
-using DevelopmentSucks.Application.Services.Identity;
-using DevelopmentSucks.Domain;
+using DevelopmentSucks.Application.Services.Identity.Auth;
+using DevelopmentSucks.Application.Services.Identity.Register;
 using DevelopmentSucks.Domain.Repositories;
+using DevelopmentSucks.Domain.Repositories.Identity;
+using DevelopmentSucks.Infrastructure.Identity.Auth;
+using DevelopmentSucks.Infrastructure.Identity.Register;
 using DevelopmentSucks.Infrastructure.Persistence;
-using DevelopmentSucks.Infrastructure.Persistence.Identity;
 using DevelopmentSucks.Infrastructure.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -26,6 +28,12 @@ try
     builder.Services.AddDbContext<AppDbContext>(options =>
         options.UseNpgsql(connString)
     );
+
+    builder.Services.Configure<JwtSettings>(
+        builder.Configuration.GetSection("JwtSettings"));
+    builder.Services.AddScoped<IJwtRepository, JwtRepository>();
+    builder.Services.AddScoped<IJwtService, JwtService>();
+    builder.Services.ConfigureJWT(builder.Configuration);
 
     builder.Services.AddScoped<ICoursesRepository, CoursesRepository>();
     builder.Services.AddScoped<ICoursesService, CoursesService>();

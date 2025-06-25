@@ -1,4 +1,4 @@
-﻿namespace DevelopmentSucks.Domain;
+﻿namespace DevelopmentSucks.Domain.Repositories.Identity;
 
 public interface IPasswordHasher
 {

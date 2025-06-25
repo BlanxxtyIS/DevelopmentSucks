@@ -1,6 +1,6 @@
-﻿using DevelopmentSucks.Domain;
+﻿using DevelopmentSucks.Domain.Repositories.Identity;
 
-namespace DevelopmentSucks.Infrastructure.Persistence.Identity;
+namespace DevelopmentSucks.Infrastructure.Identity.Register;
 
 public class PasswordHasher : IPasswordHasher
 {

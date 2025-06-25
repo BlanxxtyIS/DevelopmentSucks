@@ -1,9 +1,9 @@
 ﻿using DevelopmentSucks.Application.Contracts.DTO;
-using DevelopmentSucks.Domain;
 using DevelopmentSucks.Domain.Entities;
 using DevelopmentSucks.Domain.Repositories;
+using DevelopmentSucks.Domain.Repositories.Identity;
 
-namespace DevelopmentSucks.Application.Services.Identity;
+namespace DevelopmentSucks.Application.Services.Identity.Register;
 
 public class AuthService : IAuthService
 {
