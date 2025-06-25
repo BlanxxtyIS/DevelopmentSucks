@@ -22,9 +22,15 @@ public class AuthController: ControllerBase
     {
         if (dto == null) return BadRequest();
 
-        await _authService.RegisterUser(dto);
-        return Ok();
+        var userId = await _authService.RegisterUser(dto);
+        
+        return userId != null ? Ok(new { UserId = userId }) : NotFound(new ErrorResponse
+        {
+            StatusCode = 404,
+            Message = "Пользователь с таким именем уже существует"
+        });
     }
+
 
     [HttpGet("token")]
     public async Task<ActionResult> GetToken()
