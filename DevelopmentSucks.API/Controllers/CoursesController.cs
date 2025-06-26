@@ -4,6 +4,7 @@ using DevelopmentSucks.Application.Services;
 using DevelopmentSucks.Domain.Common;
 using DevelopmentSucks.Domain.Entities;
 using DevelopmentSucks.Domain.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +22,7 @@ public class CoursesController : ControllerBase
     }
 
     [HttpGet]
+    [Authorize]
     public async Task<ActionResult<List<Course>>> GetCourses([FromQuery] PaginingParameters pagining)
     {
         var courses = await _courseService.GetAllCourses(pagining);
@@ -33,6 +35,7 @@ public class CoursesController : ControllerBase
     }
 
     [HttpGet("{id:guid}")]
+    [Authorize]
     public async Task<ActionResult<Course>> GetCourseById(Guid id)
     {
         var course = await _courseService.GetCourseById(id);
@@ -45,6 +48,7 @@ public class CoursesController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize]
     public async Task<ActionResult<Guid>> CreateCourse([FromBody] CourseDto dto)
     {
         if (dto == null)
@@ -63,6 +67,7 @@ public class CoursesController : ControllerBase
     }
 
     [HttpPut]
+    [Authorize]
     public async Task<ActionResult> UpdateCourse([FromBody] CourseDto dto)
     {
         if (dto.Id == null) 
@@ -84,6 +89,7 @@ public class CoursesController : ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [Authorize]
     public async Task<ActionResult> DeleteCourse(Guid id)
     {
         var deleted = await _courseService.DeleteCourse(id);
