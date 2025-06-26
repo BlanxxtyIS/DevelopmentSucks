@@ -8,8 +8,8 @@ public class JwtService : IJwtService
         _iJwtRepository = iJwtRepository;
     }
 
-    public string GenerateToken(string userId, string email, IList<string> roles)
+    public string GenerateToken(string userId, string username, IList<string> roles)
     {
-        return _iJwtRepository.GenerateToken(userId, email, roles);
+        return _iJwtRepository.GenerateToken(userId, username, roles);
     }
 }

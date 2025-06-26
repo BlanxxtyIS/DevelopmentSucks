@@ -34,6 +34,8 @@ try
     builder.Services.AddScoped<IJwtRepository, JwtRepository>();
     builder.Services.AddScoped<IJwtService, JwtService>();
     builder.Services.ConfigureJWT(builder.Configuration);
+    builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
+    builder.Services.AddScoped<IJwtRepository, JwtRepository>();
 
     builder.Services.AddScoped<ICoursesRepository, CoursesRepository>();
     builder.Services.AddScoped<ICoursesService, CoursesService>();

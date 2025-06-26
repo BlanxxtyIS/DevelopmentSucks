@@ -5,4 +5,5 @@ namespace DevelopmentSucks.Domain.Repositories;
 public interface IAuthRepository
 {
     Task<Guid?> RegisterAsync(User user);
+    Task<User?> LoginAsync(string username, string password);
 }

@@ -2,7 +2,7 @@
 
 namespace DevelopmentSucks.Application.Contracts.DTO;
 
-public class UserDto
+public class RegisterDto
 {
     public Guid? Id { get; set; }
 

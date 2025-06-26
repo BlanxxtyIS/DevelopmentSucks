@@ -16,12 +16,12 @@ public class JwtRepository : IJwtRepository
         _jwtSettings = jwtSettings.Value;
     }
 
-    public string GenerateToken(string userId, string email, IList<string> roles)
+    public string GenerateToken(string userId, string username, IList<string> roles)
     {
         var claims = new List<Claim>
         {
             new Claim(JwtRegisteredClaimNames.Sub, userId),
-            new Claim(JwtRegisteredClaimNames.Email, email),
+            new Claim(JwtRegisteredClaimNames.Name, username),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
         };
 

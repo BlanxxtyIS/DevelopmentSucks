@@ -18,7 +18,7 @@ public class AuthController: ControllerBase
     }
 
     [HttpPost("register")]
-    public async Task<ActionResult> RegisterUser([FromBody] UserDto dto)
+    public async Task<ActionResult> RegisterUser([FromBody] RegisterDto dto)
     {
         if (dto == null) return BadRequest();
 
@@ -29,6 +29,21 @@ public class AuthController: ControllerBase
             StatusCode = 404,
             Message = "Пользователь с таким именем уже существует"
         });
+    }
+
+    [HttpPost("login")]
+    public async Task<ActionResult> LoginUser([FromBody] LoginDto dto)
+    {
+        if (dto == null) return BadRequest();
+
+        var token = await _authService.LoginUser(dto);
+
+        return token != null ? Ok(new { accessToken = token }) :
+            Unauthorized(new ErrorResponse
+            {
+                StatusCode = 401,
+                Message = "Неверный логин или пароль"
+            }); 
     }
 
 
