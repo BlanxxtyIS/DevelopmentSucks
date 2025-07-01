@@ -12,7 +12,6 @@ namespace DevelopmentSucks.Infrastructure.Persistence.Repositories;
 public class AuthRepository: IAuthRepository
 {
     private readonly AppDbContext _context;
-    private readonly IJwtRepository _jwRepository;
     private readonly IPasswordHasher _passwordHasher;
 
     public AuthRepository(AppDbContext context, 
@@ -21,7 +20,6 @@ public class AuthRepository: IAuthRepository
     {
         _context = context;
         _passwordHasher = passwordHasher;
-        _jwRepository = jwtRepository;
     }
 
     public async Task<Guid?> RegisterAsync(User request)

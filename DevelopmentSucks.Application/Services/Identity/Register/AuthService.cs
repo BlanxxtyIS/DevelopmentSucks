@@ -34,11 +34,19 @@ public class AuthService : IAuthService
         return await _repository.RegisterAsync(user);
     }
 
-    public async Task<string?> LoginUser(LoginDto dto)
+    public async Task<LoginUserResponse?> LoginUser(LoginUserRequest dto)
     {
         var user = await _repository.LoginAsync(dto.Username, dto.Password);
         if (user == null) return null;
 
-        return _jwtService.GenerateToken(user.Id.ToString(), dto.Username, new List<string>());
+        var roles = new List<string>();
+        var accessToken = _jwtService.GenerateAccessToken(user.Id.ToString(), user.Username, roles);
+        var refreshToken = await _jwtService.GenerateAndSaveRefreshTokenAsync(user);
+
+        return new LoginUserResponse
+        {
+            AccessToken = accessToken,
+            RefreshToken = refreshToken.Token
+        };
     } 
 }

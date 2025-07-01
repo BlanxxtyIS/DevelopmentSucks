@@ -1,6 +1,11 @@
-﻿namespace DevelopmentSucks.Application.Services.Identity.Auth;
+﻿using DevelopmentSucks.Domain.Entities;
+
+namespace DevelopmentSucks.Application.Services.Identity.Auth;
 
 public interface IJwtRepository
 {
-    string GenerateToken(string userId, string username, IList<string> roles);
+    string GenerateAccessToken(string userId, string username, IList<string> roles);
+    Task<RefreshToken> GenerateAndSaveRefreshTokenAsync(User user);
+    Task<RefreshToken?> GetRefreshTokenAsync(string token);
+    Task RevokeRefreshTokenAsync(string token);
 }

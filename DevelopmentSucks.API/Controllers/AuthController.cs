@@ -32,13 +32,13 @@ public class AuthController: ControllerBase
     }
 
     [HttpPost("login")]
-    public async Task<ActionResult> LoginUser([FromBody] LoginDto dto)
+    public async Task<ActionResult> LoginUser([FromBody] LoginUserRequest dto)
     {
         if (dto == null) return BadRequest();
 
         var token = await _authService.LoginUser(dto);
 
-        return token != null ? Ok(new { accessToken = token }) :
+        return token != null ? Ok(token) :
             Unauthorized(new ErrorResponse
             {
                 StatusCode = 401,
@@ -46,11 +46,23 @@ public class AuthController: ControllerBase
             }); 
     }
 
-
-    [HttpGet("token")]
-    public async Task<ActionResult> GetToken()
+    [HttpPost("refresh")]
+    public async Task<ActionResult> Refresh([FromBody] RefreshRequestDto dto)
     {
-        var token = _jwtService.GenerateToken("123", "test@example.com", new List<string> { "Admin" });
-        return Ok(new { access_token = token });
+        var refreshToken = await _jwtService.GetRefreshTokenAsync(dto.RefreshToken);
+        if (refreshToken == null) return Unauthorized();
+
+        await _jwtService.RevokeRefreshTokenAsync(dto.RefreshToken);
+
+        var user = refreshToken.User;
+        var roles = new List<string>();
+        var accessToken = _jwtService.GenerateAccessToken(user.Id.ToString(), user.Username, roles);
+        var newRefresh = await _jwtService.GenerateAndSaveRefreshTokenAsync(user);
+
+        return Ok(new
+        {
+            accessToken = accessToken,
+            refreshToken = refreshToken.Token
+        });
     }
 }

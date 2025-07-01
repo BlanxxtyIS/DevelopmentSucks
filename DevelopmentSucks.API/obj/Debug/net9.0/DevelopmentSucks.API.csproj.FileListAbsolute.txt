@@ -146,7 +146,6 @@ C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Ser
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Serilog.Sinks.File.dll
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\BCrypt.Net-Next.dll
-C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -158,3 +157,4 @@ C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Sys
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

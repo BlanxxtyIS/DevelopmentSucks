@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DevelopmentSucks.Application.Contracts.DTO;
 
-public class LoginDto
+public class LoginUserRequest
 {
     [Required(ErrorMessage = "Username is required")]
     public string Username { get; set; } = string.Empty;

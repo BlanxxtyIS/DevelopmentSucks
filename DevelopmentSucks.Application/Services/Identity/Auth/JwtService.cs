@@ -1,4 +1,6 @@
-﻿namespace DevelopmentSucks.Application.Services.Identity.Auth;
+﻿using DevelopmentSucks.Domain.Entities;
+
+namespace DevelopmentSucks.Application.Services.Identity.Auth;
 
 public class JwtService : IJwtService
 {
@@ -8,8 +10,23 @@ public class JwtService : IJwtService
         _iJwtRepository = iJwtRepository;
     }
 
-    public string GenerateToken(string userId, string username, IList<string> roles)
+    public string GenerateAccessToken(string userId, string username, IList<string> roles)
     {
-        return _iJwtRepository.GenerateToken(userId, username, roles);
+        return _iJwtRepository.GenerateAccessToken(userId, username, roles);
+    }
+
+    public async Task<RefreshToken> GenerateAndSaveRefreshTokenAsync(User user)
+    {
+        return await _iJwtRepository.GenerateAndSaveRefreshTokenAsync(user);
+    }
+
+    public async Task<RefreshToken?> GetRefreshTokenAsync(string token)
+    {
+        return await _iJwtRepository.GetRefreshTokenAsync(token);
+    }
+
+    public async Task RevokeRefreshTokenAsync(string token)
+    {
+        await _iJwtRepository.RevokeRefreshTokenAsync(token);
     }
 }
