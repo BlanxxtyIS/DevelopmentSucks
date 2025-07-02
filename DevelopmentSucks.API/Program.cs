@@ -34,6 +34,7 @@ try
     builder.Services.AddScoped<IJwtRepository, JwtRepository>();
     builder.Services.AddScoped<IJwtService, JwtService>();
     builder.Services.ConfigureJWT(builder.Configuration);
+    builder.Services.ConfigureCors();
     builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
  
 
@@ -59,6 +60,8 @@ try
     {
         app.MapOpenApi();
     }
+
+    app.UseCors("AllowReactDevServer");
 
     app.UseHttpsRedirection();
 
