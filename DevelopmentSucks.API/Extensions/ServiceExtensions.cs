@@ -12,9 +12,10 @@ public static class ServiceExtensions
         services.AddCors(options =>
         {
             options.AddPolicy("AllowReactDevServer", policy =>
-                policy.AllowAnyOrigin()
+                policy.WithOrigins("http://localhost:3000")
                     .AllowAnyMethod()
-                    .AllowAnyHeader());
+                    .AllowAnyHeader()
+                    .AllowCredentials());
         });
 
     public static void ConfigureJWT(this IServiceCollection services, IConfiguration configuration)

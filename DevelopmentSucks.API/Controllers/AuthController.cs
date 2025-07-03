@@ -36,9 +36,21 @@ public class AuthController: ControllerBase
     {
         if (dto == null) return BadRequest();
 
-        var token = await _authService.LoginUser(dto);
+        var tokens = await _authService.LoginUser(dto);
 
-        return token != null ? Ok(token) :
+        Response.Cookies.Append("refreshToken", tokens.RefreshToken, new CookieOptions
+        {
+            HttpOnly = true,
+            Secure = true,
+            SameSite = SameSiteMode.Strict,
+            Expires = DateTime.UtcNow.AddDays(7),
+            Path = "/"
+        });
+
+        return tokens != null ? Ok(new
+        {
+            accessToken = tokens.AccessToken
+        }) :
             Unauthorized(new ErrorResponse
             {
                 StatusCode = 401,
