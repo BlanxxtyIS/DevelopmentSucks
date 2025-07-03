@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace DevelopmentSucks.API.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class AuthController: ControllerBase
 {
     private readonly IAuthService _authService;
@@ -18,7 +18,7 @@ public class AuthController: ControllerBase
     }
 
     [HttpPost("register")]
-    public async Task<ActionResult> RegisterUser([FromBody] UserDto dto)
+    public async Task<ActionResult> RegisterUser([FromBody] RegisterDto dto)
     {
         if (dto == null) return BadRequest();
 
@@ -31,11 +31,50 @@ public class AuthController: ControllerBase
         });
     }
 
-
-    [HttpGet("token")]
-    public async Task<ActionResult> GetToken()
+    [HttpPost("login")]
+    public async Task<ActionResult> LoginUser([FromBody] LoginUserRequest dto)
     {
-        var token = _jwtService.GenerateToken("123", "test@example.com", new List<string> { "Admin" });
-        return Ok(new { access_token = token });
+        if (dto == null) return BadRequest();
+
+        var tokens = await _authService.LoginUser(dto);
+
+        Response.Cookies.Append("refreshToken", tokens.RefreshToken, new CookieOptions
+        {
+            HttpOnly = true,
+            Secure = true,
+            SameSite = SameSiteMode.Strict,
+            Expires = DateTime.UtcNow.AddDays(7),
+            Path = "/"
+        });
+
+        return tokens != null ? Ok(new
+        {
+            accessToken = tokens.AccessToken
+        }) :
+            Unauthorized(new ErrorResponse
+            {
+                StatusCode = 401,
+                Message = "Неверный логин или пароль"
+            }); 
+    }
+
+    [HttpPost("refresh")]
+    public async Task<ActionResult> Refresh([FromBody] RefreshRequestDto dto)
+    {
+        var refreshToken = await _jwtService.GetRefreshTokenAsync(dto.RefreshToken);
+        if (refreshToken == null) return Unauthorized();
+
+        await _jwtService.RevokeRefreshTokenAsync(dto.RefreshToken);
+
+        var user = refreshToken.User;
+        var roles = new List<string>();
+        var accessToken = _jwtService.GenerateAccessToken(user.Id.ToString(), user.Username, roles);
+        var newRefresh = await _jwtService.GenerateAndSaveRefreshTokenAsync(user);
+
+        return Ok(new
+        {
+            accessToken = accessToken,
+            refreshToken = refreshToken.Token
+        });
     }
 }
