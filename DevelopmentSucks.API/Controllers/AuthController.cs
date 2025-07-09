@@ -42,7 +42,7 @@ public class AuthController: ControllerBase
         {
             HttpOnly = true,
             Secure = true,
-            SameSite = SameSiteMode.Strict,
+            SameSite = SameSiteMode.None,
             Expires = DateTime.UtcNow.AddDays(7),
             Path = "/"
         });
@@ -59,22 +59,33 @@ public class AuthController: ControllerBase
     }
 
     [HttpPost("refresh")]
-    public async Task<ActionResult> Refresh([FromBody] RefreshRequestDto dto)
+    public async Task<ActionResult> Refresh()
     {
-        var refreshToken = await _jwtService.GetRefreshTokenAsync(dto.RefreshToken);
-        if (refreshToken == null) return Unauthorized();
+        var refreshToken = Request.Cookies["refreshToken"];
+        if (string.IsNullOrEmpty(refreshToken)) return Unauthorized();
 
-        await _jwtService.RevokeRefreshTokenAsync(dto.RefreshToken);
+        var token = await _jwtService.GetRefreshTokenAsync(refreshToken);
+        if (token == null) return Unauthorized();
 
-        var user = refreshToken.User;
+        await _jwtService.RevokeRefreshTokenAsync(refreshToken);
+
+        var user = token.User;
         var roles = new List<string>();
         var accessToken = _jwtService.GenerateAccessToken(user.Id.ToString(), user.Username, roles);
         var newRefresh = await _jwtService.GenerateAndSaveRefreshTokenAsync(user);
 
+        Response.Cookies.Append("refreshToken", newRefresh.Token, new CookieOptions
+        {
+            HttpOnly = true,
+            Secure = true,
+            SameSite = SameSiteMode.None,
+            Expires = DateTime.UtcNow.AddDays(7),
+            Path = "/"
+        });
+
         return Ok(new
         {
-            accessToken = accessToken,
-            refreshToken = refreshToken.Token
+            accessToken = accessToken
         });
     }
 }

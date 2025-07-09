@@ -16,8 +16,10 @@ public class LessonDto
     [MaxLength(20, ErrorMessage = "Максимальная длина главы курса 20 символов")]
     public string Title { get; set; } = string.Empty;
 
-    [Required(ErrorMessage = "содержимое урока обязательа")]
+    [Required(ErrorMessage = "содержимое урока обязательна")]
     public string Content { get; set; } = string.Empty;
+
+    [Required(ErrorMessage = "номер урока обязательна")]
     public int Order { get; set; }
     public Guid ChapterId { get; set; }
 }
