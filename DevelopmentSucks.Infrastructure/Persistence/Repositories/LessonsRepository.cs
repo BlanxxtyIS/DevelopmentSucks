@@ -52,9 +52,9 @@ public class LessonsRepository : ILessonsRepository
         var updated = await _context.Lessons.FindAsync(lesson.Id);
         if (updated == null) return false;
 
-        lesson.Title = updated.Title;
-        lesson.Content = updated.Content;
-        lesson.Order = updated.Order;
+        updated.Title = lesson.Title;
+        updated.Content = lesson.Content;
+        updated.Order = lesson.Order;
 
         await _context.SaveChangesAsync();
         return true;

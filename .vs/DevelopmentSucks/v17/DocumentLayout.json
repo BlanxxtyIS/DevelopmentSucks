@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|solutionrelative:developmentsucks.api\\controllers\\lessonscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|c:\\users\\zver\\desktop\\developmentsucks\\developmentsucks.api\\extensions\\errorhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|solutionrelative:developmentsucks.api\\extensions\\errorhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7E0F0750-6CB4-407F-958C-CF47DDEA1248}|DevelopmentSucks.Infrastructure\\DevelopmentSucks.Infrastructure.csproj|c:\\users\\zver\\desktop\\developmentsucks\\developmentsucks.infrastructure\\persistence\\repositories\\lessonsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E0F0750-6CB4-407F-958C-CF47DDEA1248}|DevelopmentSucks.Infrastructure\\DevelopmentSucks.Infrastructure.csproj|solutionrelative:developmentsucks.infrastructure\\persistence\\repositories\\lessonsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|c:\\users\\zver\\desktop\\developmentsucks\\developmentsucks.api\\extensions\\errorhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|solutionrelative:developmentsucks.api\\extensions\\errorhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{16E64CAA-D38C-4459-8A4D-CB1D8647146F}|DevelopmentSucks.Application\\DevelopmentSucks.Application.csproj|c:\\users\\zver\\desktop\\developmentsucks\\developmentsucks.application\\contracts\\dto\\lessondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -140,7 +140,7 @@
               "RelativeDocumentMoniker": "DevelopmentSucks.API\\Controllers\\LessonsController.cs",
               "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.API\\Controllers\\LessonsController.cs",
               "RelativeToolTip": "DevelopmentSucks.API\\Controllers\\LessonsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwDoAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-03T12:57:19.261Z",
               "EditorCaption": ""
@@ -155,31 +155,30 @@
               "RelativeToolTip": "DevelopmentSucks.Application\\Contracts\\DTO\\LessonDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T06:19:11.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-08T06:19:11.504Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "LessonsRepository.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\LessonsRepository.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\LessonsRepository.cs",
               "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\LessonsRepository.cs",
               "RelativeToolTip": "DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\LessonsRepository.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAQwDwAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAIwDoAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-01T12:52:02.795Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ErrorHandlerMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.API\\Extensions\\ErrorHandlerMiddleware.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.API\\Extensions\\ErrorHandlerMiddleware.cs",
               "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.API\\Extensions\\ErrorHandlerMiddleware.cs",
               "RelativeToolTip": "DevelopmentSucks.API\\Extensions\\ErrorHandlerMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwBUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-02T08:42:32.612Z",
               "EditorCaption": ""
