@@ -78,7 +78,7 @@ public class CoursesController : ControllerBase
             Id = dto.Id.Value,
             Title = dto.Title,
             Description = dto.Description,
-            CreatedAt = dto.CreatedAt
+            CreatedAt = dto.CreatedAt.ToUniversalTime()
         });
 
         return updated ? NoContent() : NotFound(new ErrorResponse
