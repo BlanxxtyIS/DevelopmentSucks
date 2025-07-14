@@ -45,6 +45,7 @@ public class ChaptersController: ControllerBase
     }
 
     [HttpPost]
+    [Authorize]
     public async Task<ActionResult<Guid>> CreateChapter([FromBody] ChapterDto dto)
     {
         var chapter = new Chapter
@@ -61,6 +62,7 @@ public class ChaptersController: ControllerBase
     }
 
     [HttpPut]
+    [Authorize]
     public async Task<ActionResult> UpdateChapter([FromBody] ChapterDto dto)
     {
         if (dto.Id == null || dto.Id == Guid.Empty) 
@@ -82,6 +84,7 @@ public class ChaptersController: ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [Authorize]
     public async Task<ActionResult> DeleteChapter(Guid id)
     {
         var deletedChapter = await _chaptersService.DeleteChapter(id);
