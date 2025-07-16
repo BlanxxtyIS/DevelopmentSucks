@@ -23,7 +23,7 @@ public class LessonsRepository : ILessonsRepository
     {
         var lessons = await _context.Lessons
             .AsNoTracking()
-            .OrderBy(l => l.Title)
+            .OrderBy(l => l.Order)
             .Skip((pagining.PageNumber - 1) * pagining.PageSize)
             .Take(pagining.PageSize)
             .ToListAsync();

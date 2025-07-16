@@ -73,7 +73,7 @@ public class LessonsController: ControllerBase
         return updatedLesson ? NoContent() : NotFound(new ErrorResponse
         {
             StatusCode = 404,
-            Message = "Ошибка при обновлении курса"
+            Message = "Ошибка при обновлении урока"
         });
     }
 
