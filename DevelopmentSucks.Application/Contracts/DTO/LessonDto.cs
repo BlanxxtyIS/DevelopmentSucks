@@ -13,7 +13,7 @@ public class LessonDto
     public Guid? Id { get; set; }
 
     [Required(ErrorMessage = "Название урока обязательо")]
-    [MaxLength(30, ErrorMessage = "Максимальная длина главы курса 20 символов")]
+    [MaxLength(30, ErrorMessage = "Максимальная длина главы курса 30 символов")]
     public string Title { get; set; } = string.Empty;
 
     [Required(ErrorMessage = "содержимое урока обязательна")]
