@@ -157,4 +157,3 @@ C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Sys
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
-C:\Users\Zver\Desktop\DevelopmentSucks\DevelopmentSucks.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

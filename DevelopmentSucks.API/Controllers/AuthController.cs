@@ -38,11 +38,20 @@ public class AuthController: ControllerBase
 
         var tokens = await _authService.LoginUser(dto);
 
+        if (tokens == null)
+        {
+            return Unauthorized(new ErrorResponse
+            {
+                StatusCode = 401,
+                Message = "Неверный логин или пароль"
+            });
+        }
+
         Response.Cookies.Append("refreshToken", tokens.RefreshToken, new CookieOptions
         {
             HttpOnly = true,
             Secure = true,
-            SameSite = SameSiteMode.None,
+            SameSite = SameSiteMode.None, 
             Expires = DateTime.UtcNow.AddDays(7),
             Path = "/"
         });

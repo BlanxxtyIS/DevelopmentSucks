@@ -1,4 +1,5 @@
 ﻿using DevelopmentSucks.Domain.Common;
+using DevelopmentSucks.Domain.Common.FilterParameters;
 using DevelopmentSucks.Domain.Entities;
 using DevelopmentSucks.Domain.Repositories;
 using Microsoft.Extensions.Logging;
@@ -22,11 +23,11 @@ public class LessonsService : ILessonsService
         _logger = logger;
     }
 
-    public async Task<List<Lesson>> GetAllLessons(PaginingParameters pagining)
+    public async Task<List<Lesson>> GetAllLessons(LessonFilterParameters parameters)
     {
         try
         {
-            return await _lessonsRepository.GetLessons(pagining);
+            return await _lessonsRepository.GetLessons(parameters);
         }
         catch (Exception ex)
         {

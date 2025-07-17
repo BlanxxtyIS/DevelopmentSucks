@@ -1,4 +1,5 @@
 ﻿using DevelopmentSucks.Domain.Common;
+using DevelopmentSucks.Domain.Common.FilterParameters;
 using DevelopmentSucks.Domain.Entities;
 using DevelopmentSucks.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -19,16 +20,25 @@ public class LessonsRepository : ILessonsRepository
         _context = context;
     }
 
-    public async Task<List<Lesson>> GetLessons(PaginingParameters pagining)
+    public async Task<List<Lesson>> GetLessons(LessonFilterParameters parameters)
     {
-        var lessons = await _context.Lessons
-            .AsNoTracking()
-            .OrderBy(l => l.Order)
-            .Skip((pagining.PageNumber - 1) * pagining.PageSize)
-            .Take(pagining.PageSize)
-            .ToListAsync();
+        var query = _context.Lessons.AsQueryable();
 
-        return lessons;
+        if (parameters.MinOrder.HasValue)
+            query = query.Where(l => l.Order >= parameters.MinOrder.Value);
+
+        if (parameters.MaxOrder.HasValue)
+            query = query.Where(l => l.Order <= parameters.MaxOrder.Value);
+
+        query = query.OrderBy(l => l.Order);
+
+        query = query
+            .Skip((parameters.PageNumber - 1) * parameters.PageSize)
+            .Take(parameters.PageSize);
+
+        return await query
+            .AsNoTracking()
+            .ToListAsync();
     }
 
     public async Task<Lesson?> GetLesson(Guid id)

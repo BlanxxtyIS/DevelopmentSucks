@@ -1,6 +1,7 @@
 ﻿using DevelopmentSucks.Application.Contracts.DTO;
 using DevelopmentSucks.Application.Services;
 using DevelopmentSucks.Domain.Common;
+using DevelopmentSucks.Domain.Common.FilterParameters;
 using DevelopmentSucks.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -20,9 +21,9 @@ public class LessonsController: ControllerBase
 
     [HttpGet]
     [Authorize]
-    public async Task<ActionResult<List<Lesson>>> GetAllLessons([FromQuery] PaginingParameters pagining)
+    public async Task<ActionResult<List<Lesson>>> GetAllLessons([FromQuery] LessonFilterParameters parameters)
     {
-        var lessons = await _lessonService.GetAllLessons(pagining);
+        var lessons = await _lessonService.GetAllLessons(parameters);
         return Ok(lessons); 
     }
 

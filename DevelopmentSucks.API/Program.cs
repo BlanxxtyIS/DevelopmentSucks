@@ -44,6 +44,8 @@ try
     builder.Services.AddScoped<IChaptersService, ChaptersService>();
     builder.Services.AddScoped<ILessonsRepository, LessonsRepository>();
     builder.Services.AddScoped<ILessonsService, LessonsService>();
+    builder.Services.AddScoped<IUserService, UserService>();
+    builder.Services.AddScoped<IUserRepository, UsersRepository>();
 
     builder.Services.AddScoped<IAuthService, AuthService>();
     builder.Services.AddScoped<IAuthRepository, AuthRepository>();

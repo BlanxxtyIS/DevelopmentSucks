@@ -18,7 +18,7 @@ public class UsersController : ControllerBase
     }
 
     [HttpGet]
-    [Authorize]
+    //[Authorize]
     public async Task<ActionResult<List<User>>> GetAllUsers()
     {
         var users = await _userService.GetAllUsers();
