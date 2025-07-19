@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Domain\\DevelopmentSucks.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Domain\\DevelopmentSucks.Domain.csproj",
       "projectName": "DevelopmentSucks.Domain",
-      "projectPath": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Domain\\DevelopmentSucks.Domain.csproj",
+      "projectPath": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Domain\\DevelopmentSucks.Domain.csproj",
       "packagesPath": "C:\\Users\\Zver\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ig0raRE9MLQ=",
+  "dgSpecHash": "CoyI5e+snro=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\DevelopmentSucks.Infrastructure\\DevelopmentSucks.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Infrastructure\\DevelopmentSucks.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Zver\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Zver\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

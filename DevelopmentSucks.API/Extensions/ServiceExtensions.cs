@@ -12,7 +12,7 @@ public static class ServiceExtensions
         services.AddCors(options =>
         {
             options.AddPolicy("AllowReactDevServer", policy =>
-                policy.WithOrigins("http://localhost:3000")
+                policy.WithOrigins("https://localhost")
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials());
