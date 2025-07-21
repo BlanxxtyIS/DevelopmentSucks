@@ -8,7 +8,6 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-
 namespace DevelopmentSucks.Infrastructure.Identity.Auth;
 
 public class JwtRepository : IJwtRepository

@@ -12,16 +12,16 @@ const handleLogout = async () => {
             method: "POST",
             credentials: "include"
         });
-
+        console.log("НАЖАЛИ");
         localStorage.removeItem("accessToken");
         setUser(null);
-
+        console.log("НАЖАЛИ");
         navigate("/login");
     } catch (err) {
+        console.log("НАЖАЛИ");
         console.error("Ошибка при выходе:", err);
     }
 };
-
 
     return (
         <header className="app-header">
@@ -31,8 +31,8 @@ const handleLogout = async () => {
             <div className="auth">
                 {user 
                     ? <>
-                        <span>Привет, {user.Header}</span>
-                        <button onClick={handleLogout}>Logout</button>                   
+                        <span>Привет, {user?.username ?? "пользователь"}</span>
+                        <button onClick={handleLogout}>Logout</button>                
                     </>
                 : <>
                 <Link to="/login">
