@@ -1,8 +1,28 @@
 import React from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-export default function Header({user, onLogin, onLogout}) {
+export default function Header({user, setUser}) {
+    const navigate = useNavigate();
+
+const handleLogout = async () => {
+
+    try {
+        const response = await fetch("https://localhost/api/auth/logout", {  
+            method: "POST",
+            credentials: "include"
+        });
+
+        localStorage.removeItem("accessToken");
+        setUser(null);
+
+        navigate("/login");
+    } catch (err) {
+        console.error("Ошибка при выходе:", err);
+    }
+};
+
+
     return (
         <header className="app-header">
             <div className="logo">
@@ -11,12 +31,17 @@ export default function Header({user, onLogin, onLogout}) {
             <div className="auth">
                 {user 
                     ? <>
-                        <span>Привет, {user.name}</span>
-                         <button onClick={onLogout}>Logout</button>
+                        <span>Привет, {user.Header}</span>
+                        <button onClick={handleLogout}>Logout</button>                   
                     </>
                 : <>
-                <button onClick={onLogin}>Login</button>
-                <button onClick={onLogin}>Register</button>
+                <Link to="/login">
+                    <button >Login</button>
+                </Link>
+                
+                <Link to="/register">
+                    <button >Register</button>
+                </Link>
                 </>
                 }   
             </div>

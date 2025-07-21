@@ -1,7 +1,9 @@
 ﻿using DevelopmentSucks.Application.Contracts.DTO;
 using DevelopmentSucks.Application.Services.Identity.Auth;
 using DevelopmentSucks.Application.Services.Identity.Register;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace DevelopmentSucks.API.Controllers;
 
@@ -15,6 +17,14 @@ public class AuthController: ControllerBase
     {
         _authService = authService;
         _jwtService = jwtService;
+    }
+
+    [Authorize]
+    [HttpGet("me")]
+    public async Task<ActionResult> GetMe()
+    {
+        var username = User.FindFirst(ClaimTypes.Name)?.Value;
+        return Ok(new { username });
     }
 
     [HttpPost("register")]
@@ -65,6 +75,27 @@ public class AuthController: ControllerBase
                 StatusCode = 401,
                 Message = "Неверный логин или пароль"
             }); 
+    }
+
+    [HttpPost("logout")]
+    public async Task<ActionResult> Logout()
+    {
+        var refreshTokenFromCookie = Request.Cookies["refreshToken"];
+        if (refreshTokenFromCookie is not null)
+        {
+            await _jwtService.RevokeRefreshTokenAsync(refreshTokenFromCookie);
+        }
+
+        // Удаляем куку с refresh-токеном (просто переустанавливаем пустую)
+        Response.Cookies.Append("refreshToken", "", new CookieOptions
+        {
+            HttpOnly = true,
+            Secure = true,
+            SameSite = SameSiteMode.Strict,
+            Expires = DateTime.UtcNow.AddDays(-1)
+        });
+
+        return Ok(new { message = "Вы успешно вышли" });
     }
 
     [HttpPost("refresh")]

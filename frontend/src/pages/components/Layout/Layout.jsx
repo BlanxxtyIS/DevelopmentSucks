@@ -7,29 +7,24 @@ import { useNavigate } from "react-router-dom";
 
 export default function Layout({ children }) {
   const [lessons, setLessons] = useState([]);
-  const [user, setUser] = useState(null);
-
-  const handleLogin = () => setUser({ name: "UserName" });
-  const handleLogout = () => setUser(null);
-
-  const token = localStorage.getItem('accessToken');
+  const [user, setUser] = useState(localStorage.getItem('accessToken'));
 
   useEffect(() => {
     async function loadLessons() {
       try {
-        const data = await lessonsApi.getAllLessons(token);
+        const data = await lessonsApi.getAllLessons(user);
         setLessons(data);
       } catch (err) {
         console.log('Ошибка при загрузке');
       }
   }
   loadLessons();
-  }, [token]);
+  }, [user]);
 
 
   return (
     <>
-      <Header user={token} onLogin={handleLogin} onLogout={handleLogout} />
+      <Header user={user} setUser={setUser}/>
       <Sidebar lessons={lessons} />
       <main className="layout-content">
         {children}
