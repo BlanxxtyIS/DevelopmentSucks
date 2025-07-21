@@ -1,0 +1,38 @@
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  height: calc(100vh - 60px);
+  width: 220px;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 12px;
+}
+
+.sidebar a, .sidebar button {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  color: #3273dc;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 6px 4px;
+  cursor: pointer;
+}
+
+.sidebar a:hover,
+.sidebar button:hover {
+  text-decoration: underline;
+}
