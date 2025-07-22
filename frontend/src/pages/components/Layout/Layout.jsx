@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../Header/Header";
 import Sidebar from "../Slidebar/Slidebar";
 import * as lessonsApi from "../../../api/lessonsApi";
 import "./Layout.css";
-import { useNavigate } from "react-router-dom";
 
 export default function Layout({ children }) {
   const [lessons, setLessons] = useState([]);

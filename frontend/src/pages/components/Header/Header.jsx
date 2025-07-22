@@ -1,4 +1,3 @@
-import React from "react";
 import "./Header.css";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -9,7 +8,7 @@ export default function Header({user, setUser}) {
 const handleLogout = async () => {
 
     try {
-        const response = await fetch("https://localhost/api/auth/logout", {  
+        await fetch("https://localhost/api/auth/logout", {  
             method: "POST",
             credentials: "include"
         });

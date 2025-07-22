@@ -14,7 +14,7 @@ export default function ChapterPage() {
 
     useEffect(() => {
         loadChapters();
-    }, []);
+    }, [loadChapters]);
 
     async function loadChapters() {
         try {
