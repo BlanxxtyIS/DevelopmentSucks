@@ -27,3 +27,16 @@ jobs:
 
     - name: Запуск тестов
       run: dotnet test backend/DevelopmentSucks.sln --no-build --configuration Release
+
+    - name: Установить Node.js
+      uses: actions/setup-node@v4
+      with: 
+        node-version: '20'
+
+    - name: Установка зависимостей frontend
+      working-directory: ./frontend
+      run: npm install
+
+    - name: Сборка frontend
+      working-directory: ./frontend
+      run: npm run build
