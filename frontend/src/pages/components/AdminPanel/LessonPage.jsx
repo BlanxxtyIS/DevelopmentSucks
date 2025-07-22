@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import * as lessonsApi from '../../../api/lessonsApi';
 
 export default function LessonPage() {
@@ -17,14 +17,14 @@ export default function LessonPage() {
         loadLessons();
     }, [loadLessons]);
 
-    async function loadLessons() {
+    const loadLessons = useCallback(async () =>  {
         try {
             const data = await lessonsApi.getAllLessons(token);
             setLessons(data);
         } catch (err) {
             console.error('Ошибка загрузки уроков:', err.message);
         }
-    }
+    }, [token]);
 
     async function handleSubmit(e) {
         e.preventDefault();

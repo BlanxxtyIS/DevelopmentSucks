@@ -30,7 +30,7 @@ export default function Layout({ children }) {
       }
     }
     fetchUser();
-  }, []);
+  }, [token]);
 
   useEffect(() => {
     async function loadLessons() {
@@ -42,7 +42,7 @@ export default function Layout({ children }) {
       }
   }
   loadLessons();
-  }, []);
+  }, [token]);
 
 
   return (

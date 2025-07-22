@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import * as chaptersApi from '../../../api/chaptersApi'
 
 export default function ChapterPage() {
@@ -16,14 +16,14 @@ export default function ChapterPage() {
         loadChapters();
     }, [loadChapters]);
 
-    async function loadChapters() {
+     const loadChapters = useCallback(async () =>  {
         try {
             const data = await chaptersApi.getAllChapters(token);
             setChapters(data);
         } catch (err) {
             console.error('Ошибка загркузки главы:', err.message);
         }
-    }
+    }, [token]);
 
     async function handleSubmit(e) {
         e.preventDefault(); //Не перезагружает страницу
