@@ -13,10 +13,6 @@ export default function LessonPage() {
 
     const token = localStorage.getItem('accessToken');
 
-    useEffect(() => {
-        loadLessons();
-    }, [loadLessons]);
-
     const loadLessons = useCallback(async () =>  {
         try {
             const data = await lessonsApi.getAllLessons(token);
@@ -25,6 +21,10 @@ export default function LessonPage() {
             console.error('Ошибка загрузки уроков:', err.message);
         }
     }, [token]);
+
+    useEffect(() => {
+        loadLessons();
+    }, [loadLessons]);
 
     async function handleSubmit(e) {
         e.preventDefault();

@@ -12,10 +12,6 @@ export default function ChapterPage() {
 
     const token = localStorage.getItem('accessToken');
 
-    useEffect(() => {
-        loadChapters();
-    }, [loadChapters]);
-
      const loadChapters = useCallback(async () =>  {
         try {
             const data = await chaptersApi.getAllChapters(token);
@@ -24,6 +20,10 @@ export default function ChapterPage() {
             console.error('Ошибка загркузки главы:', err.message);
         }
     }, [token]);
+
+    useEffect(() => {
+        loadChapters();
+    }, [loadChapters]);
 
     async function handleSubmit(e) {
         e.preventDefault(); //Не перезагружает страницу
