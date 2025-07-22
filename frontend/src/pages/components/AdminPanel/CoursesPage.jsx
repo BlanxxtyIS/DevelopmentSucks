@@ -10,19 +10,18 @@ export default function CoursesPage() {
     });
 
     const token = localStorage.getItem('accessToken');
-
-    useEffect(() => {
-        loadCourses();
-    }, []);
-    
-    async function loadCourses() {
+    const loadCourses = useCallback(async () => {
         try {
             const data = await coursesApi.getAllCourses(token);
             setCourses(data);
         } catch (err) {
             console.error('Ошибка загрузки курсов:', err.message);
         }
-    }
+    }, [token]);
+
+    useEffect(() => {
+        loadCourses();
+    }, [loadCourses]);
 
     async function handleSubmit(e) {
         e.preventDefault();

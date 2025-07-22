@@ -1,5 +1,3 @@
-import { json } from "react-router-dom";
-
 //const BASE_URL = 'http://localhost:8080/api/chapters';
 const BASE_URL = 'https://localhost/api/chapters';
 

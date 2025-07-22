@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import RefreshToken from './components/AdminPanel/RefreshToken';
 import LessonPage from './components/AdminPanel/LessonPage';
 import CoursesPage from './components/AdminPanel/CoursesPage';
