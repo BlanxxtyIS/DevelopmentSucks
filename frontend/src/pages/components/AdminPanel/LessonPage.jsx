@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import * as lessonsApi from '../../../api/lessonsApi';
 
 export default function LessonPage() {
@@ -15,7 +15,7 @@ export default function LessonPage() {
 
     useEffect(() => {
         loadLessons();
-    }, []);
+    }, [loadLessons]);
 
     async function loadLessons() {
         try {
