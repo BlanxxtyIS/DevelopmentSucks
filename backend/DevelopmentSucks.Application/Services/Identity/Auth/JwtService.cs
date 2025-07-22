@@ -10,9 +10,9 @@ public class JwtService : IJwtService
         _iJwtRepository = iJwtRepository;
     }
 
-    public string GenerateAccessToken(string userId, string username, IList<string> roles)
+    public string GenerateAccessToken(User user)
     {
-        return _iJwtRepository.GenerateAccessToken(userId, username, roles);
+        return _iJwtRepository.GenerateAccessToken(user);
     }
 
     public async Task<RefreshToken> GenerateAndSaveRefreshTokenAsync(User user)

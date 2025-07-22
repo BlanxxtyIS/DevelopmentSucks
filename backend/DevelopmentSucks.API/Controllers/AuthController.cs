@@ -111,7 +111,7 @@ public class AuthController: ControllerBase
 
         var user = token.User;
         var roles = new List<string>();
-        var accessToken = _jwtService.GenerateAccessToken(user.Id.ToString(), user.Username, roles);
+        var accessToken = _jwtService.GenerateAccessToken(user);
         var newRefresh = await _jwtService.GenerateAndSaveRefreshTokenAsync(user);
 
         Response.Cookies.Append("refreshToken", newRefresh.Token, new CookieOptions

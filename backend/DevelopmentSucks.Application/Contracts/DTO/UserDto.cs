@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using DevelopmentSucks.Domain.Entities;
+using System.ComponentModel.DataAnnotations;
 
 namespace DevelopmentSucks.Application.Contracts.DTO;
 
@@ -16,4 +17,6 @@ public class UserDto
 
     [Required]
     public string PasswordHash { get; set; } = string.Empty;
+
+    public UserRole? Role { get; set; }
 }

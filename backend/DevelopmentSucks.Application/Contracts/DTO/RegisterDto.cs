@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using DevelopmentSucks.Domain.Entities;
+using System.ComponentModel.DataAnnotations;
 
 namespace DevelopmentSucks.Application.Contracts.DTO;
 
@@ -15,4 +16,6 @@ public class RegisterDto
     [Required(ErrorMessage = "Password is required")]
     [MaxLength(6, ErrorMessage = "Max length is 6")]
     public string Password { get; set; } = string.Empty;
+
+    public UserRole? Role { get; set; }
 }

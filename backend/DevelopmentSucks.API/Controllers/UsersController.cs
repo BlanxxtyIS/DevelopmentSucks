@@ -42,12 +42,14 @@ public class UsersController : ControllerBase
     [Authorize]
     public async Task<ActionResult<Guid>> CreateUser([FromBody] UserDto dto)
     {
+
         var user = new User
         {
             Id = Guid.NewGuid(),
             Username = dto.Username,
             Email = dto.Email,
             PasswordHash = dto.PasswordHash,
+            Role = dto.Role ?? UserRole.Student
         };
 
         var createdUserId = await _userService.CreateUser(user);

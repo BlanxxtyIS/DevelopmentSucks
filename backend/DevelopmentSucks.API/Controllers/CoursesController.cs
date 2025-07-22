@@ -22,7 +22,7 @@ public class CoursesController : ControllerBase
     }
 
     [HttpGet]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public async Task<ActionResult<List<Course>>> GetCourses([FromQuery] PaginingParameters pagining)
     {
         var courses = await _courseService.GetAllCourses(pagining);

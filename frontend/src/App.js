@@ -5,6 +5,7 @@ import RegisterPage from './pages/RegisterPage';
 import HomePage from './pages/HomePage';
 import AdminPage from './pages/AdminPage';
 import CurrentLessonPage from './pages/components/CurrentLessonPage';
+import RequireAdmin from './pages/components/RequireAdmin';
 import Layout from './pages/components/Layout/Layout';
 import './styles/styles.css';
 
@@ -21,9 +22,13 @@ function App() {
           <HomePage />
         </Layout>} />
 
-        <Route path='/admin' element={<Layout>
-          <AdminPage />
-        </Layout>} />
+        <Route path='/admin' element={
+          <RequireAdmin>
+            <Layout>
+              <AdminPage />
+            </Layout>
+          </RequireAdmin>
+        } />
 
         <Route path='/lessons/:order?' element={<Layout>
           <CurrentLessonPage />

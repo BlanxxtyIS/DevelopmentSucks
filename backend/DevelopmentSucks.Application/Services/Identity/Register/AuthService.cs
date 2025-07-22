@@ -40,7 +40,7 @@ public class AuthService : IAuthService
         if (user == null) return null;
 
         var roles = new List<string>();
-        var accessToken = _jwtService.GenerateAccessToken(user.Id.ToString(), user.Username, roles);
+        var accessToken = _jwtService.GenerateAccessToken(user);
         var refreshToken = await _jwtService.GenerateAndSaveRefreshTokenAsync(user);
 
         return new LoginUserResponse

@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function Header({user, setUser}) {
     const navigate = useNavigate();
+    const token = localStorage.getItem('accessToken');
 
 const handleLogout = async () => {
 
@@ -12,13 +13,10 @@ const handleLogout = async () => {
             method: "POST",
             credentials: "include"
         });
-        console.log("НАЖАЛИ");
         localStorage.removeItem("accessToken");
         setUser(null);
-        console.log("НАЖАЛИ");
         navigate("/login");
     } catch (err) {
-        console.log("НАЖАЛИ");
         console.error("Ошибка при выходе:", err);
     }
 };
@@ -31,7 +29,7 @@ const handleLogout = async () => {
             <div className="auth">
                 {user 
                     ? <>
-                        <span>Привет, {user?.username ?? "пользователь"}</span>
+                        <span>Привет, {user ?? "пользователь"}</span>
                         <button onClick={handleLogout}>Logout</button>                
                     </>
                 : <>

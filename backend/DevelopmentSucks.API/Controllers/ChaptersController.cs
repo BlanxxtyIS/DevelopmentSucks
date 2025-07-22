@@ -20,7 +20,7 @@ public class ChaptersController: ControllerBase
     }
 
     [HttpGet]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public async Task<ActionResult<List<Chapter>>> GetChapters([FromQuery] PaginingParameters pagining)
     {
         var chapters = await _chaptersService.GetAllChapters(pagining);
