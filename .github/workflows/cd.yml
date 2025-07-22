@@ -20,7 +20,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/developmentsucks-api:latest .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/developmentsucks-api:latest ./backend
 
       - name: Push Docker image
         run: |

@@ -20,10 +20,10 @@ jobs:
         dotnet-version: '9.0.x'
 
     - name: Восстановить зависимости
-      run: dotnet restore
+      run: dotnet restore backend/DevelopmentSucks.sln
 
     - name: Сборка проекта
-      run: dotnet build --no-restore --configuration Release
+      run: dotnet build backend/DevelopmentSucks.sln --no-restore --configuration Release
 
     - name: Запуск тестов
-      run: dotnet test --no-build --configuration Release
+      run: dotnet test backend/DevelopmentSucks.sln --no-build --configuration Release
