@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7E0F0750-6CB4-407F-958C-CF47DDEA1248}|DevelopmentSucks.Infrastructure\\DevelopmentSucks.Infrastructure.csproj|c:\\users\\zver\\desktop\\developmentsucks\\backend\\developmentsucks.infrastructure\\identity\\auth\\jwtrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E0F0750-6CB4-407F-958C-CF47DDEA1248}|DevelopmentSucks.Infrastructure\\DevelopmentSucks.Infrastructure.csproj|solutionrelative:developmentsucks.infrastructure\\identity\\auth\\jwtrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E0F0750-6CB4-407F-958C-CF47DDEA1248}|DevelopmentSucks.Infrastructure\\DevelopmentSucks.Infrastructure.csproj|c:\\users\\zver\\desktop\\developmentsucks\\backend\\developmentsucks.infrastructure\\persistence\\repositories\\lessonsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E0F0750-6CB4-407F-958C-CF47DDEA1248}|DevelopmentSucks.Infrastructure\\DevelopmentSucks.Infrastructure.csproj|solutionrelative:developmentsucks.infrastructure\\persistence\\repositories\\lessonsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16E64CAA-D38C-4459-8A4D-CB1D8647146F}|DevelopmentSucks.Application\\DevelopmentSucks.Application.csproj|c:\\users\\zver\\desktop\\developmentsucks\\backend\\developmentsucks.application\\services\\identity\\auth\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16E64CAA-D38C-4459-8A4D-CB1D8647146F}|DevelopmentSucks.Application\\DevelopmentSucks.Application.csproj|solutionrelative:developmentsucks.application\\services\\identity\\auth\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|c:\\users\\zver\\desktop\\developmentsucks\\backend\\developmentsucks.api\\controllers\\lessonscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EFB4737D-1722-45C6-9312-9BE8A635C3F1}|DevelopmentSucks.API\\DevelopmentSucks.API.csproj|solutionrelative:developmentsucks.api\\controllers\\lessonscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -61,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7E0F0750-6CB4-407F-958C-CF47DDEA1248}|DevelopmentSucks.Infrastructure\\DevelopmentSucks.Infrastructure.csproj|c:\\users\\zver\\desktop\\developmentsucks\\backend\\developmentsucks.infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E0F0750-6CB4-407F-958C-CF47DDEA1248}|DevelopmentSucks.Infrastructure\\DevelopmentSucks.Infrastructure.csproj|solutionrelative:developmentsucks.infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E0F0750-6CB4-407F-958C-CF47DDEA1248}|DevelopmentSucks.Infrastructure\\DevelopmentSucks.Infrastructure.csproj|c:\\users\\zver\\desktop\\developmentsucks\\backend\\developmentsucks.infrastructure\\persistence\\repositories\\lessonsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E0F0750-6CB4-407F-958C-CF47DDEA1248}|DevelopmentSucks.Infrastructure\\DevelopmentSucks.Infrastructure.csproj|solutionrelative:developmentsucks.infrastructure\\persistence\\repositories\\lessonsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4AF7F470-F6F3-4E10-A4AF-5DA4D748D591}|DevelopmentSucks.Domain\\DevelopmentSucks.Domain.csproj|c:\\users\\zver\\desktop\\developmentsucks\\backend\\developmentsucks.domain\\common\\paginingparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -150,7 +158,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -162,32 +170,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\Program.cs",
-              "RelativeDocumentMoniker": "DevelopmentSucks.API\\Program.cs",
-              "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\Program.cs",
-              "RelativeToolTip": "DevelopmentSucks.API\\Program.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T07:27:03.952Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ServiceExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\Extensions\\ServiceExtensions.cs",
-              "RelativeDocumentMoniker": "DevelopmentSucks.API\\Extensions\\ServiceExtensions.cs",
-              "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\Extensions\\ServiceExtensions.cs",
-              "RelativeToolTip": "DevelopmentSucks.API\\Extensions\\ServiceExtensions.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAAB8AAAAcAAAAAAAAAA==",
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Application\\Services\\Identity\\Auth\\JwtService.cs",
+              "RelativeDocumentMoniker": "DevelopmentSucks.Application\\Services\\Identity\\Auth\\JwtService.cs",
+              "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Application\\Services\\Identity\\Auth\\JwtService.cs",
+              "RelativeToolTip": "DevelopmentSucks.Application\\Services\\Identity\\Auth\\JwtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T07:26:54.991Z",
+              "WhenOpened": "2025-07-23T11:16:54.294Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
+              "Title": "JwtRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Infrastructure\\Identity\\Auth\\JwtRepository.cs",
+              "RelativeDocumentMoniker": "DevelopmentSucks.Infrastructure\\Identity\\Auth\\JwtRepository.cs",
+              "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Infrastructure\\Identity\\Auth\\JwtRepository.cs",
+              "RelativeToolTip": "DevelopmentSucks.Infrastructure\\Identity\\Auth\\JwtRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAowBcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T11:16:30.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "CoursesController.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\Controllers\\CoursesController.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.API\\Controllers\\CoursesController.cs",
@@ -199,7 +208,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "LessonsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\LessonsRepository.cs",
+              "RelativeDocumentMoniker": "DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\LessonsRepository.cs",
+              "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\LessonsRepository.cs",
+              "RelativeToolTip": "DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\LessonsRepository.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAUwEQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T12:52:02.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ServiceExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\Extensions\\ServiceExtensions.cs",
+              "RelativeDocumentMoniker": "DevelopmentSucks.API\\Extensions\\ServiceExtensions.cs",
+              "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\Extensions\\ServiceExtensions.cs",
+              "RelativeToolTip": "DevelopmentSucks.API\\Extensions\\ServiceExtensions.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAB8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T07:26:54.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ChaptersController.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\Controllers\\ChaptersController.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.API\\Controllers\\ChaptersController.cs",
@@ -211,7 +245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.API\\Controllers\\UsersController.cs",
@@ -223,20 +257,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "LessonsController.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\Controllers\\LessonsController.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.API\\Controllers\\LessonsController.cs",
               "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\Controllers\\LessonsController.cs",
               "RelativeToolTip": "DevelopmentSucks.API\\Controllers\\LessonsController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAA1wBYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-22T07:17:41.873Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.API\\Controllers\\AuthController.cs",
@@ -244,12 +278,23 @@
               "RelativeToolTip": "DevelopmentSucks.API\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T07:17:39.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T07:17:39.322Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\Program.cs",
+              "RelativeDocumentMoniker": "DevelopmentSucks.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\Program.cs",
+              "RelativeToolTip": "DevelopmentSucks.API\\Program.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T07:27:03.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "20250722065821_AddedRoles.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Infrastructure\\Migrations\\20250722065821_AddedRoles.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Infrastructure\\Migrations\\20250722065821_AddedRoles.cs",
@@ -261,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "ErrorHandlerMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\Extensions\\ErrorHandlerMiddleware.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.API\\Extensions\\ErrorHandlerMiddleware.cs",
@@ -273,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "JwtSettings.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Infrastructure\\Identity\\Auth\\JwtSettings.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Infrastructure\\Identity\\Auth\\JwtSettings.cs",
@@ -285,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "DevelopmentSucks.API\\Properties\\launchSettings.json",
@@ -297,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\appsettings.json",
               "RelativeDocumentMoniker": "DevelopmentSucks.API\\appsettings.json",
@@ -309,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\appsettings.Development.json",
               "RelativeDocumentMoniker": "DevelopmentSucks.API\\appsettings.Development.json",
@@ -321,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "CoursesService.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Application\\Services\\CoursesService.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Application\\Services\\CoursesService.cs",
@@ -333,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Infrastructure\\Persistence\\AppDbContext.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Infrastructure\\Persistence\\AppDbContext.cs",
@@ -345,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "PaginingParameters.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Domain\\Common\\PaginingParameters.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Domain\\Common\\PaginingParameters.cs",
@@ -357,7 +402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "ILessonsService.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Application\\Services\\ILessonsService.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Application\\Services\\ILessonsService.cs",
@@ -369,7 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "LessonsService.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Application\\Services\\LessonsService.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Application\\Services\\LessonsService.cs",
@@ -381,7 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "ILessonsRepository.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Domain\\Repositories\\ILessonsRepository.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Domain\\Repositories\\ILessonsRepository.cs",
@@ -393,19 +438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "LessonsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\LessonsRepository.cs",
-              "RelativeDocumentMoniker": "DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\LessonsRepository.cs",
-              "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\LessonsRepository.cs",
-              "RelativeToolTip": "DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\LessonsRepository.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T12:52:02.795Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "LessonFilterParameters.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Domain\\Common\\FilterParameters\\LessonFilterParameters.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Domain\\Common\\FilterParameters\\LessonFilterParameters.cs",
@@ -417,7 +450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "ChaptersRepository.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\ChaptersRepository.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\ChaptersRepository.cs",
@@ -429,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "CoursesRepository.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\CoursesRepository.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\CoursesRepository.cs",
@@ -441,7 +474,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "Lesson.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Domain\\Entities\\Lesson.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Domain\\Entities\\Lesson.cs",
@@ -453,7 +486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "LessonDto.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Application\\Contracts\\DTO\\LessonDto.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Application\\Contracts\\DTO\\LessonDto.cs",
@@ -465,7 +498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Application\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Application\\Services\\UserService.cs",
@@ -477,7 +510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "ChaptersService.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Application\\Services\\ChaptersService.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Application\\Services\\ChaptersService.cs",
@@ -489,7 +522,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "Chapter.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Domain\\Entities\\Chapter.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Domain\\Entities\\Chapter.cs",
@@ -501,7 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "Course.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Domain\\Entities\\Course.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Domain\\Entities\\Course.cs",
@@ -513,7 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "LoginUserResponse.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Application\\Contracts\\DTO\\LoginUserResponse.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Application\\Contracts\\DTO\\LoginUserResponse.cs",
@@ -525,7 +558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "RefreshRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Application\\Contracts\\DTO\\RefreshRequestDto.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Application\\Contracts\\DTO\\RefreshRequestDto.cs",
@@ -537,7 +570,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "DevelopmentSucks-app20250703.log",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\logs\\DevelopmentSucks-app20250703.log",
               "RelativeDocumentMoniker": "DevelopmentSucks.API\\logs\\DevelopmentSucks-app20250703.log",
@@ -549,7 +582,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "LoginUserRequest.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Application\\Contracts\\DTO\\LoginUserRequest.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Application\\Contracts\\DTO\\LoginUserRequest.cs",
@@ -561,7 +594,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "IAuthRepository.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Domain\\Repositories\\IAuthRepository.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Domain\\Repositories\\IAuthRepository.cs",
@@ -573,7 +606,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "IPasswordHasher.cs",
               "DocumentMoniker": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.Domain\\Repositories\\Identity\\IPasswordHasher.cs",
               "RelativeDocumentMoniker": "DevelopmentSucks.Domain\\Repositories\\Identity\\IPasswordHasher.cs",
