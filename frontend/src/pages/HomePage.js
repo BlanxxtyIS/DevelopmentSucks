@@ -4,7 +4,6 @@ export default function HomePage() {
     return (
         <div>
         <h1>Happy Hacking!</h1>
-        <p>{accessToken} AND {refreshToken}</p>
         </div>
     )
 }

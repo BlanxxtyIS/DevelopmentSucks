@@ -1,3 +1,5 @@
+import { AuthFetch } from "../pages/components/AuthFetch";
+
 //const BASE_URL = 'http://localhost:8080/api/chapters';
 const BASE_URL = 'https://localhost/api/chapters';
 
@@ -16,11 +18,10 @@ export async function  getAllChapters(token) {
     return response.json();
 }
 
-export async function  addChapter(chapter, token) {
-    const response = await fetch(BASE_URL, {
+export async function  addChapter(chapter) {
+    const response = await AuthFetch(BASE_URL, {
         method: 'POST',
         headers: {
-            'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(chapter),
@@ -34,12 +35,11 @@ export async function  addChapter(chapter, token) {
     return response.json();
 }
 
-export async function editChapter(chapter, token) {
-    const response = await fetch(BASE_URL, {
+export async function editChapter(chapter) {
+    const response = await AuthFetch(BASE_URL, {
         method: 'PUT',
         body: JSON.stringify(chapter),
         headers: {
-            'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
         },
         credentials: 'include'
@@ -52,11 +52,10 @@ export async function editChapter(chapter, token) {
     return;
 }
 
-export async function deleteChapter(id, token) {
-    const response = await fetch(`${BASE_URL}/${id}`, {
+export async function deleteChapter(id) {
+    const response = await AuthFetch(`${BASE_URL}/${id}`, {
         method: 'DELETE',
         headers: {
-            'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
         },
         credentials: 'include'

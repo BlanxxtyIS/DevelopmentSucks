@@ -1,3 +1,4 @@
+import { AuthFetch } from "../pages/components/AuthFetch";
 
 //const BASE_URL = 'http://localhost:8080/api/lessons';
 const BASE_URL = 'https://localhost/api/lessons';
@@ -16,15 +17,13 @@ export async function getAllLessons(token) {
     return response.json();
 }
 
-export async function addLesson(lesson, token) {
-    const response = await fetch(BASE_URL, {
+export async function addLesson(lesson) {
+    const response = await AuthFetch(BASE_URL, {
         method: 'POST',
         body: JSON.stringify(lesson),
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`,
         },  
-        credentials: 'include'
     });
 
     if (!response.ok) {
@@ -35,11 +34,10 @@ export async function addLesson(lesson, token) {
 }
 
 export async function editLesson(lesson) {
-    const response = await fetch(BASE_URL, {
+    const response = await AuthFetch(BASE_URL, {
         method: 'PUT',
         body: JSON.stringify(lesson),
         headers: {'Content-Type': 'application/json'},
-        credentials: 'include'
     });
 
     if (!response.ok) {
@@ -50,10 +48,9 @@ export async function editLesson(lesson) {
 }
 
 export async function deleteLesson(id) {
-    const response = await fetch(`${BASE_URL}/${id}`, {
+    const response = await AuthFetch(`${BASE_URL}/${id}`, {
         method: 'DELETE',
         headers: {'Content-Type': 'application/json'},
-        credentials: 'include'
     });
 
     if (!response.ok) {

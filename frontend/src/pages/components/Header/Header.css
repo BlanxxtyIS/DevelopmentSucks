@@ -34,3 +34,29 @@
   cursor: pointer;
   padding: 5px 10px;
 }
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  font-family: sans-serif;
+  position: relative;
+}
+
+/* Центрированное название */
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Примерные стили для логотипа и auth-блока */
+.logo, .auth {
+  z-index: 1;
+}
+

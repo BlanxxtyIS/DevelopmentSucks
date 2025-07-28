@@ -24,6 +24,7 @@ const handleLogout = async () => {
             <div className="logo">
                 <Link to="/">🏠 Home</Link>
             </div>
+             <div>Development Sucks</div>
             <div className="auth">
                 {user 
                     ? <>

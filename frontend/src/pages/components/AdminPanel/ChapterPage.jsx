@@ -10,16 +10,14 @@ export default function ChapterPage() {
         courseId: ''
     });
 
-    const token = localStorage.getItem('accessToken');
-
      const loadChapters = useCallback(async () =>  {
         try {
-            const data = await chaptersApi.getAllChapters(token);
+            const data = await chaptersApi.getAllChapters();
             setChapters(data);
         } catch (err) {
             console.error('Ошибка загркузки главы:', err.message);
         }
-    }, [token]);
+    }, []);
 
     useEffect(() => {
         loadChapters();
@@ -29,9 +27,9 @@ export default function ChapterPage() {
         e.preventDefault(); //Не перезагружает страницу
         try {
             if (editingChapter) {
-                await chaptersApi.editChapter({...formData, id: editingChapter.id}, token);
+                await chaptersApi.editChapter({...formData, id: editingChapter.id});
             } else {
-                await chaptersApi.addChapter(formData, token);
+                await chaptersApi.addChapter(formData);
             }
 
             await loadChapters();
@@ -54,7 +52,7 @@ export default function ChapterPage() {
     async function hanldeDelete(id) {
         if (!window.confirm('Удалить эту главу?')) return;
         try {
-            await chaptersApi.deleteChapter(id, token);
+            await chaptersApi.deleteChapter(id);
             await loadChapters();
         } catch (err) {
             console.error('Ошибка удаления главы:', err.message);

@@ -4,7 +4,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import HomePage from './pages/HomePage';
 import AdminPage from './pages/AdminPage';
-import CurrentLessonPage from './pages/components/CurrentLessonPage';
+import CurrentLessonPage from './pages/components/CurrentLessonPage/CurrentLessonPage';
 import RequireAdmin from './pages/components/RequireAdmin';
 import Layout from './pages/components/Layout/Layout';
 import './styles/styles.css';

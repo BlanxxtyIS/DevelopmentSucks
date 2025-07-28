@@ -1,13 +1,10 @@
+import { AuthFetch } from "../pages/components/AuthFetch";
+
 //const BASE_URL = 'http://localhost:8080/api/courses';
 const BASE_URL = 'https://localhost/api/courses';
 
-export async function getAllCourses(token) {
-    const response = await fetch(BASE_URL, {
-        headers: {
-            'Authorization': `Bearer ${token}`
-        },
-        credentials: 'include'
-    });
+export async function getAllCourses() {
+    const response = await AuthFetch(BASE_URL);
 
     if (!response.ok) {
         throw new Error('Ошибка при загрузке курсов');
@@ -16,16 +13,13 @@ export async function getAllCourses(token) {
     return response.json();
 }
 
-export async function addCourse(course, token) {
-    const response = await fetch(BASE_URL, {
+export async function addCourse(course) {
+    const response = await AuthFetch(BASE_URL, {
         method: 'POST',
         body: JSON.stringify(course),
         headers: {
-            'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
         },
-        
-        credentials: 'include'
     });
 
     if (!response.ok) {
@@ -35,15 +29,13 @@ export async function addCourse(course, token) {
     return response.json();
 }
 
-export async function editCourse(course, token) {
-    const response = await fetch(BASE_URL, {
+export async function editCourse(course) {
+    const response = await AuthFetch(BASE_URL, {
         method: 'PUT',
         body: JSON.stringify(course),
         headers: {
-            'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
         },
-        credentials: 'include'
     });
 
     if (!response.ok) {
@@ -52,14 +44,12 @@ export async function editCourse(course, token) {
     return;
 }
 
-export async function deleteCourse(id, token) {
-    const response = await fetch(`${BASE_URL}/${id}`, {
+export async function deleteCourse(id) {
+    const response = await AuthFetch(`${BASE_URL}/${id}`, {
         method: 'DELETE',
         headers: {
-            'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
         },
-        credentials: 'include'
     });
 
     if (!response.ok) {

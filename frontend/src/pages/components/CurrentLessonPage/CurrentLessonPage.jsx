@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
-import * as lessonsApi from "../../api/lessonsApi";
+import * as lessonsApi from "../../../api/lessonsApi";
 
 export default function CurrentLessonPage() {
     const [lessons, setLessons] = useState([]);
@@ -37,7 +37,8 @@ export default function CurrentLessonPage() {
     return (
         <div>
             <h1>{currentLesson?.title}</h1>
-            <div dangerouslySetInnerHTML={{__html: currentLesson.content}} />
+            {/* <div dangerouslySetInnerHTML={{__html: currentLesson.content}} /> */}
+            <div className="lesson-content" dangerouslySetInnerHTML={{__html: currentLesson.content}} />
             <p><em>Глава ID: {currentLesson.id}</em></p>
 
             <div style={{marginTop: "1rem"}}>

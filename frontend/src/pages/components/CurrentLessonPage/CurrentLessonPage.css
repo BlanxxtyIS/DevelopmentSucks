@@ -1,0 +1,94 @@
+.lesson-content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: #333;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  background-color: #fff;
+}
+
+/* Заголовки */
+.lesson-content h1,
+.lesson-content h2,
+.lesson-content h3 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  margin: 2rem 0 1rem;
+  color: #222;
+}
+
+.lesson-content h1 {
+  font-size: 2.4rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.lesson-content h2 {
+  font-size: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.4rem;
+}
+
+.lesson-content h3 {
+  font-size: 1.6rem;
+}
+
+/* Параграфы */
+.lesson-content p {
+  margin: 1.2rem 0;
+}
+
+/* Списки */
+.lesson-content ul {
+  padding-left: 2rem;
+  margin: 1rem 0;
+}
+
+.lesson-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Картинки */
+.lesson-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ссылки */
+.lesson-content a {
+  color: #3273dc;
+  text-decoration: underline;
+  transition: 0.2s;
+}
+
+.lesson-content a:hover {
+  color: #2557b7;
+}
+
+/* Кнопки под уроком */
+.customButton {
+  color: #5D6063;
+  background-color: #c0f7b3;
+  font-weight: bold;
+  padding: 12px 24px;
+  text-align: center;
+  border: 2px solid #5D6063;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.customButton:hover:not(:disabled) {
+  background-color: #aaf192;
+}
+
+.customButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,48 +1,80 @@
 body {
     margin: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #5D6063; /* приятный серый */
+    color: #333;
     background: #fff;
+    line-height: 1.6;
 }
 
 .layout-content {
-  max-width: 800px;
-  margin: 80px auto 40px auto; /* 80px — отступ под Header */
-  padding: 0 20px;
-}
-
-h1 {
-    font-size: 2.5em;
-}
-
-h2 {
-    font-size: 2.0em;
+    max-width: 800px;
+    margin: 80px auto 40px auto; /* отступ под Header */
+    padding: 0 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: center;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
+    font-weight: 400;
+    text-align: left; /* По умолчанию — влево */
+}
+
+/* Центрируем только h1 */
+h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
 }
 
 a {
     color: #3273dc;
-    text-decoration: none; /* ссылки не подчеркиваются */
+    text-decoration: none;
 }
+
+img {
+    display: block;
+    margin: 1em auto; /* сверху и снизу отступы — по желанию */
+}
+
 
 p {
-    font-size: 1.1em;
+    font-size: 0.7em;
     margin-bottom: 1em;
+    text-align: left;
 }
 
+/* Списки */
+ul {
+    padding-left: 20px;
+    margin: 0.7em;
+}
+
+li {
+    font-size: 0.7em;
+    margin-bottom: 0.5em;
+    list-style-type: disc;
+    text-align: left;
+}
+
+/* Кнопки */
 .customButton {
-  color: #5D6063;
-  background-color: #c0f7b3;
-  font-weight: bold;
-  padding: 12px 24px;
-  text-align: center;
-  border: 2px solid #5D6063;
-  border-radius: 5px;
-  cursor: pointer;
+    color: #333;
+    background-color: #c0f7b3;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: 2px solid #5D6063;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.customButton:hover {
+    background-color: #a9eda3;
 }

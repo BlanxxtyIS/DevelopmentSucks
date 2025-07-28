@@ -7,12 +7,6 @@ export default function AdminPage() {
     return (
         <div>
             <h1>Панель администратора</h1>
-
-            <div>
-                <p>Обновить токен</p>       
-                 <RefreshToken />
-            </div>
-
             <hr/>
             <CoursesPage />
             <hr />
