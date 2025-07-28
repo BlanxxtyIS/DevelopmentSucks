@@ -22,7 +22,7 @@ public class CoursesController : ControllerBase
     }
 
     [HttpGet]
-    [Authorize(Roles = "Admin")]
+    [Authorize]
     public async Task<ActionResult<List<Course>>> GetCourses([FromQuery] PaginingParameters pagining)
     {
         var courses = await _courseService.GetAllCourses(pagining);
@@ -48,7 +48,7 @@ public class CoursesController : ControllerBase
     }
 
     [HttpPost]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public async Task<ActionResult<Guid>> CreateCourse([FromBody] CourseDto dto)
     {
         if (dto == null)
@@ -67,7 +67,7 @@ public class CoursesController : ControllerBase
     }
 
     [HttpPut]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public async Task<ActionResult> UpdateCourse([FromBody] CourseDto dto)
     {
         if (dto.Id == null) 
@@ -89,7 +89,7 @@ public class CoursesController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public async Task<ActionResult> DeleteCourse(Guid id)
     {
         var deleted = await _courseService.DeleteCourse(id);

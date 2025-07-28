@@ -1,8 +1,8 @@
 ﻿using DevelopmentSucks.Domain.Entities;
 using DevelopmentSucks.Infrastructure.Identity.Auth;
 using DevelopmentSucks.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-using Moq;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
@@ -28,8 +28,12 @@ public class JwtRepositoryTests
             Role = UserRole.Admin
         };
 
-        var mockDbContext = new Mock<AppDbContext>();
-        var jwtRepository = new JwtRepository(jwtSettings, mockDbContext.Object);
+        var options = new DbContextOptionsBuilder<AppDbContext>()
+            .UseInMemoryDatabase("TestDb")
+            .Options;
+
+        var context = new AppDbContext(options);
+        var jwtRepository = new JwtRepository(jwtSettings, context);
 
         //Act
         var token = jwtRepository.GenerateAccessToken(user);

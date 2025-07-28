@@ -86,6 +86,9 @@ public class LessonsRepositoryTests
             Content = "Text", Order = 1 
         };
 
+        await context.Lessons.AddAsync(lesson);
+        await context.SaveChangesAsync();   
+
         lesson.Title = "Updated";
         var result = await repo.UpdateLesson(lesson);
 

@@ -16,11 +16,14 @@ export async function getAllLessons(token) {
     return response.json();
 }
 
-export async function addLesson(lesson) {
+export async function addLesson(lesson, token) {
     const response = await fetch(BASE_URL, {
         method: 'POST',
         body: JSON.stringify(lesson),
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`,
+        },  
         credentials: 'include'
     });
 

@@ -12,7 +12,6 @@ export default function LessonPage() {
     });
 
     const token = localStorage.getItem('accessToken');
-
     const loadLessons = useCallback(async () =>  {
         try {
             const data = await lessonsApi.getAllLessons(token);
@@ -30,9 +29,9 @@ export default function LessonPage() {
         e.preventDefault();
         try {
             if (editingLesson) {
-                await lessonsApi.editLesson({ ...formData, id: editingLesson.id });
+                await lessonsApi.editLesson({ ...formData, id: editingLesson.id }, token);
             } else {
-                await lessonsApi.addLesson(formData);
+                await lessonsApi.addLesson(formData, token);
             }
             await loadLessons();
             setFormData({ title: '', content: '', order: 1, chapterId: '' });

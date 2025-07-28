@@ -20,7 +20,6 @@ public class LessonsController: ControllerBase
     }
 
     [HttpGet]
-    [Authorize]
     public async Task<ActionResult<List<Lesson>>> GetAllLessons([FromQuery] LessonFilterParameters parameters)
     {
         var lessons = await _lessonService.GetAllLessons(parameters);
@@ -40,6 +39,7 @@ public class LessonsController: ControllerBase
     }
 
     [HttpPost]
+    [Authorize(Roles = "Admin")]
     public async Task<ActionResult<Guid>> CreateLesson([FromBody] LessonDto dto)
     {
         var lesson = new Lesson
@@ -56,6 +56,7 @@ public class LessonsController: ControllerBase
     }
 
     [HttpPut]
+    [Authorize(Roles = "Admin")]
     public async Task<ActionResult> UpdatedLesson([FromBody] LessonDto dto)
     {
         if (dto.Id == Guid.Empty || dto.Id == null) 
@@ -79,6 +80,7 @@ public class LessonsController: ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [Authorize(Roles = "Admin")]
     public async Task<ActionResult> DeleteLesson(Guid id)
     {
         var deletedLessonId = await _lessonService.DeleteLesson(id);
