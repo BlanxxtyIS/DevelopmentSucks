@@ -29,15 +29,15 @@ const handleLogout = async () => {
                 {user 
                     ? <>
                         <span>Привет, {user ?? "пользователь"}</span>
-                        <button onClick={handleLogout}>Logout</button>                
+                        <button onClick={handleLogout}>Выйти</button>                
                     </>
                 : <>
                 <Link to="/login">
-                    <button >Login</button>
+                    <button >Войти</button>
                 </Link>
                 
                 <Link to="/register">
-                    <button >Register</button>
+                    <button >Зарегистрироваться</button>
                 </Link>
                 </>
                 }   

@@ -22,7 +22,7 @@ public class ErrorHandlerMiddleware
     {
         try
         {
-            await _next(context);
+            await _next(context); //передаем дальше
         }
         catch (Exception ex)
         {

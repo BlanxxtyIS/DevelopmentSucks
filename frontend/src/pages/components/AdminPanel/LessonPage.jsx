@@ -14,7 +14,7 @@ export default function LessonPage() {
     const token = localStorage.getItem('accessToken');
     const loadLessons = useCallback(async () =>  {
         try {
-            const data = await lessonsApi.getAllLessons(token);
+            const data = await lessonsApi.getAllLessons();
             setLessons(data);
         } catch (err) {
             console.error('Ошибка загрузки уроков:', err.message);

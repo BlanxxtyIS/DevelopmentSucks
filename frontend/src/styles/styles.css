@@ -44,7 +44,7 @@ img {
 
 
 p {
-    font-size: 0.7em;
+    font-size: 0.9em;
     margin-bottom: 1em;
     text-align: left;
 }
@@ -78,3 +78,5 @@ li {
 .customButton:hover {
     background-color: #a9eda3;
 }
+
+

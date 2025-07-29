@@ -8,6 +8,7 @@ import CurrentLessonPage from './pages/components/CurrentLessonPage/CurrentLesso
 import RequireAdmin from './pages/components/RequireAdmin';
 import Layout from './pages/components/Layout/Layout';
 import './styles/styles.css';
+import RequireAuth from './pages/components/RequireAuth';
 
 function App() {  
   return (
@@ -30,9 +31,13 @@ function App() {
           </RequireAdmin>
         } />
 
-        <Route path='/lessons/:order?' element={<Layout>
-          <CurrentLessonPage />
-        </Layout>} />
+        <Route path='/lessons/:order?' element={
+          <RequireAuth>
+            <Layout>
+              <CurrentLessonPage />
+            </Layout>
+          </RequireAuth>
+      } />
       </Routes>
     </Router>
   );

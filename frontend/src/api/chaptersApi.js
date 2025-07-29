@@ -4,12 +4,7 @@ import { AuthFetch } from "../pages/components/AuthFetch";
 const BASE_URL = 'https://localhost/api/chapters';
 
 export async function  getAllChapters(token) {
-    const response = await fetch(BASE_URL, {
-        headers: {
-            'Authorization': `Bearer ${token}`
-        },
-        credentials: 'include'
-    });
+    const response = await AuthFetch(BASE_URL);
 
     if (!response.ok) {
         throw new Error('Ошибка при загрузке глав');
@@ -25,7 +20,6 @@ export async function  addChapter(chapter) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(chapter),
-        credentials: 'include'
     });
 
     if (!response.ok) {
@@ -41,8 +35,7 @@ export async function editChapter(chapter) {
         body: JSON.stringify(chapter),
         headers: {
             'Content-Type': 'application/json'
-        },
-        credentials: 'include'
+        }
     });
 
     if (!response.ok) {
@@ -57,8 +50,7 @@ export async function deleteChapter(id) {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
-        },
-        credentials: 'include'
+        }
     });
 
     if (!response.ok) {

@@ -3,13 +3,8 @@ import { AuthFetch } from "../pages/components/AuthFetch";
 //const BASE_URL = 'http://localhost:8080/api/lessons';
 const BASE_URL = 'https://localhost/api/lessons';
 
-export async function getAllLessons(token) {
-    const response = await fetch(BASE_URL, {
-        headers: {
-                'Authorization': `Bearer ${token}`
-        },
-        credentials: 'include'
-    });
+export async function getAllLessons() {
+    const response = await AuthFetch(BASE_URL);
 
     if (!response.ok) {
         throw new Error('Ошибка при загрузке уроков');
