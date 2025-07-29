@@ -8,6 +8,8 @@ using DevelopmentSucks.Infrastructure.Identity.Auth;
 using DevelopmentSucks.Infrastructure.Identity.Register;
 using DevelopmentSucks.Infrastructure.Persistence;
 using DevelopmentSucks.Infrastructure.Persistence.Repositories;
+using MessageBus;
+using MessageBus.Connection;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -49,6 +51,11 @@ try
 
     builder.Services.AddScoped<IAuthService, AuthService>();
     builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+
+    builder.Services.AddSingleton<IRabbitMqConnection>(new RabbitMqConnection());
+    builder.Services.AddScoped<IMessageProducer, RabbitMqProducer>();
+/*    var rabbitConnection = new RabbitMqConnection();
+    await rabbitConnection.ConnectAsync();*/
 
     builder.Services.AddControllers();
 
