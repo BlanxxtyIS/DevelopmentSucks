@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ActivityLogger\ActivityLogger.csproj" />
     <ProjectReference Include="..\DevelopmentSucks.Application\DevelopmentSucks.Application.csproj" />
     <ProjectReference Include="..\DevelopmentSucks.Infrastructure\DevelopmentSucks.Infrastructure.csproj" />
     <ProjectReference Include="..\MessageBus\MessageBus.csproj" />

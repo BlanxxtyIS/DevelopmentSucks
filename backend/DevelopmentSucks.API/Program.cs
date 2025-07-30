@@ -31,6 +31,9 @@ try
         options.UseNpgsql(connString)
     );
 
+    builder.Services.AddDbContext<ActivityLogger.AppDbContext>(options =>
+        options.UseNpgsql(connString));
+
     builder.Services.Configure<JwtSettings>(
         builder.Configuration.GetSection("JwtSettings"));
     builder.Services.AddScoped<IJwtRepository, JwtRepository>();

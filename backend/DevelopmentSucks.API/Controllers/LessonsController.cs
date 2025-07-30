@@ -3,6 +3,7 @@ using DevelopmentSucks.Application.Services;
 using DevelopmentSucks.Domain.Common;
 using DevelopmentSucks.Domain.Common.FilterParameters;
 using DevelopmentSucks.Domain.Entities;
+using MessageBus;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,10 +14,11 @@ namespace DevelopmentSucks.API.Controllers;
 public class LessonsController: ControllerBase
 {
     private readonly ILessonsService _lessonService;
-
-    public LessonsController(ILessonsService lessonsService)
+    private readonly IMessageProducer _producer;
+    public LessonsController(ILessonsService lessonsService, IMessageProducer producer)
     {
         _lessonService = lessonsService;
+        _producer = producer;
     }
 
     [HttpGet]
@@ -52,6 +54,15 @@ public class LessonsController: ControllerBase
         };
 
         var createdLessonId = await _lessonService.CreateLesson(lesson);
+
+        var activity = new UserActivityMessage
+        {
+            UserId = User.Identity?.Name ?? "anonymous",
+            Action = $"Создал урок {dto.Title}",
+            Timestamp = DateTime.UtcNow
+        };
+        await _producer.SendMessageAsync(activity);
+        
         return CreatedAtAction(nameof(GetLessonById), new { id = createdLessonId }, createdLessonId);
     }
 
