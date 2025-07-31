@@ -236,7 +236,7 @@
               "RelativeDocumentMoniker": "DevelopmentSucks.API\\Controllers\\LessonsController.cs",
               "ToolTip": "C:\\Users\\Zver\\Desktop\\DevelopmentSucks\\backend\\DevelopmentSucks.API\\Controllers\\LessonsController.cs",
               "RelativeToolTip": "DevelopmentSucks.API\\Controllers\\LessonsController.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAcwFsAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-28T08:04:31.525Z",
               "EditorCaption": ""
@@ -251,8 +251,7 @@
               "RelativeToolTip": "DevelopmentSucks.API\\Controllers\\CoursesController.cs",
               "ViewState": "AgIAAEUAAAAAAAAAAAAYwDMAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T07:18:01.329Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T07:18:01.329Z"
             },
             {
               "$type": "Document",
@@ -264,8 +263,7 @@
               "RelativeToolTip": "DevelopmentSucks.API\\Extensions\\ErrorHandlerMiddleware.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T08:42:32.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T08:42:32.612Z"
             },
             {
               "$type": "Document",
@@ -277,8 +275,7 @@
               "RelativeToolTip": "DevelopmentSucks.API\\Program.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAAAEgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T07:27:03.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T07:27:03.952Z"
             },
             {
               "$type": "Document",
@@ -290,8 +287,7 @@
               "RelativeToolTip": "DevelopmentSucks.Infrastructure\\Persistence\\Repositories\\ChaptersRepository.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAuwEYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-17T07:00:33.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-17T07:00:33.576Z"
             },
             {
               "$type": "Document",
@@ -303,8 +299,7 @@
               "RelativeToolTip": "DevelopmentSucks.Application\\Services\\CoursesService.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAAwFUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-14T11:21:09.287Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-14T11:21:09.287Z"
             },
             {
               "$type": "Document",
