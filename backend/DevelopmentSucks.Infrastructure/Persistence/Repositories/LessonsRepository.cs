@@ -1,13 +1,7 @@
-﻿using DevelopmentSucks.Domain.Common;
-using DevelopmentSucks.Domain.Common.FilterParameters;
+﻿using DevelopmentSucks.Domain.Common.FilterParameters;
 using DevelopmentSucks.Domain.Entities;
 using DevelopmentSucks.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevelopmentSucks.Infrastructure.Persistence.Repositories;
 

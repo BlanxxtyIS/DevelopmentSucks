@@ -1,4 +1,6 @@
 using DevelopmentSucks.API.Extensions;
+using DevelopmentSucks.API.RabbitMQ;
+using DevelopmentSucks.API.RabbitMQ.Connection;
 using DevelopmentSucks.Application.Services;
 using DevelopmentSucks.Application.Services.Identity.Auth;
 using DevelopmentSucks.Application.Services.Identity.Register;
@@ -49,6 +51,11 @@ try
 
     builder.Services.AddScoped<IAuthService, AuthService>();
     builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+
+    var rabbitConnection = new RabbitMqConnection();
+    await rabbitConnection.InitializeAsync();
+    builder.Services.AddSingleton<IRabbitMqConnection>(new RabbitMqConnection());
+    builder.Services.AddScoped<IMessageProducer, RabbitMqProducer>();
 
     builder.Services.AddControllers();
 

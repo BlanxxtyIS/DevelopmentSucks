@@ -1,4 +1,5 @@
-﻿using DevelopmentSucks.Application.Contracts.DTO;
+﻿using DevelopmentSucks.API.RabbitMQ;
+using DevelopmentSucks.Application.Contracts.DTO;
 using DevelopmentSucks.Application.Services;
 using DevelopmentSucks.Domain.Common;
 using DevelopmentSucks.Domain.Common.FilterParameters;

@@ -1,4 +1,5 @@
-﻿using DevelopmentSucks.Application.Contracts;
+﻿using DevelopmentSucks.API.RabbitMQ;
+using DevelopmentSucks.Application.Contracts;
 using DevelopmentSucks.Application.Contracts.DTO;
 using DevelopmentSucks.Application.Services;
 using DevelopmentSucks.Domain.Common;
@@ -16,7 +17,7 @@ public class ChaptersController: ControllerBase
 
     public ChaptersController(IChaptersService chaptersService)
     {
-        _chaptersService = chaptersService;
+        _chaptersService = chaptersService;  
     }
 
     [HttpGet]

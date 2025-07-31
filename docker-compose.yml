@@ -10,11 +10,39 @@ services:
     depends_on:
       db:
         condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
       - ConnectionStrings__DefaultConnection=Host=${DB_HOST};Port=${DB_PORT};Database=${DB_NAME};Username=${DB_USER};Password=${DB_PASSWORD}
       - JwtSettings__Key=${JWT_KEY}
+
+  subscriber:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      args:
+        PROJECT: Subscriber
+    entrypoint: ["dotnet", "Subscriber.dll"]
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  rabbitmq: 
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "check_port_connectivity"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
   frontend:
     build:
       context: ./frontend
