@@ -1,4 +1,5 @@
-﻿using DevelopmentSucks.Application.Contracts;
+﻿using DevelopmentSucks.API.RabbitMQ;
+using DevelopmentSucks.Application.Contracts;
 using DevelopmentSucks.Application.Contracts.DTO;
 using DevelopmentSucks.Application.Services;
 using DevelopmentSucks.Domain.Common;
@@ -15,10 +16,11 @@ namespace DevelopmentSucks.API.Controllers;
 public class CoursesController : ControllerBase
 {
     private readonly ICoursesService _courseService;
-
-    public CoursesController(ICoursesService courseService)
+    private readonly IMessageProducer _producer;
+    public CoursesController(ICoursesService courseService, IMessageProducer producer)
     {
         _courseService = courseService;
+        _producer = producer;
     }
 
     [HttpGet]
@@ -61,6 +63,8 @@ public class CoursesController : ControllerBase
             Description = dto.Description,
             CreatedAt = DateTime.SpecifyKind(dto.CreatedAt, DateTimeKind.Utc)
         };
+
+        await _producer.SendMessageAsync(course);
 
         var createdCourse = await _courseService.CreateCourse(course);
         return CreatedAtAction(nameof(GetCourseById), new { id = createdCourse }, createdCourse);

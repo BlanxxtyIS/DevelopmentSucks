@@ -52,8 +52,6 @@ try
     builder.Services.AddScoped<IAuthService, AuthService>();
     builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 
-    var rabbitConnection = new RabbitMqConnection();
-    await rabbitConnection.InitializeAsync();
     builder.Services.AddSingleton<IRabbitMqConnection>(new RabbitMqConnection());
     builder.Services.AddScoped<IMessageProducer, RabbitMqProducer>();
 
@@ -62,6 +60,11 @@ try
     builder.Services.AddOpenApi();
 
     var app = builder.Build();
+    using (var scope = app.Services.CreateScope())
+    {
+        var rabbitConnection = scope.ServiceProvider.GetRequiredService<IRabbitMqConnection>();
+        await rabbitConnection.InitializeAsync();
+    }
 
     app.UseMiddleware<ErrorHandlerMiddleware>();
 

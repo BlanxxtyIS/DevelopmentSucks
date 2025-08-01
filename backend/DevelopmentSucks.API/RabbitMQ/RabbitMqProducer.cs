@@ -18,7 +18,7 @@ public class RabbitMqProducer : IMessageProducer
     {
         var channel = await _connection.Connection.CreateChannelAsync();
 
-        await channel.QueueDeclareAsync(queue: "orders", exclusive: false, autoDelete: false, arguments: null);
+        await channel.QueueDeclareAsync(queue: "orders", durable: true, exclusive: false, autoDelete: false, arguments: null);
 
         var json = JsonSerializer.Serialize(message);
         var body = Encoding.UTF8.GetBytes(json);
